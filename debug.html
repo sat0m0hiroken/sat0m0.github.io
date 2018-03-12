@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>HIROKEN業務マニュアル｜デバッグ方法</title>
+
+  <link href="css/reset.css" rel="stylesheet" type="text/css">
+  <link href="css/style.css" rel="stylesheet" type="text/css">
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet">
+
+  <meta property="og:title" content="" />
+  <meta property="og:description" content="" />
+  <meta property="og:url" content="" />
+  <meta property="og:image" content="" />
+  <!--footer下にscript関連あり-->
+
+</head>
+
+<body class="regulation">
+  <!-- sp nav -->
+  <div class="nav--sp">
+    <a class="nav--sp__trigger js__sideMenuBtn">
+      <span></span>
+      <span></span>
+      <span></span>
+    </a>
+  </div>
+
+  <!-- メニュー展開時のoverlay -->
+  <div class="overlay js__overlay"></div>
+  <header class="header">
+    <div class="nav">
+      <nav class="side-menu">
+				<ul class="menu">
+					<li class="navi1"><a href="index.html">TOP</a></li>
+				  <li class="navi2"><a href="code.html">CODE</a></li>
+				  <li class="navi3"><a href="debug.html">DEBUG</a></li>
+					<li class="navi5"><a href="flow.html">FLOW</a></li>
+					<li class="navi4"><a href="regulation.html">REGULATION</a></li>
+					<li class="navi5"><a href="seo.html">SEO</a></li>
+					<li class="navi6 target">
+						<a id="links" href="#"><i class="sad far fa-caret-square-down fa-2x"></i></a>
+						<!--
+						<ul class="sub">
+							<li class="navi7"><a href="#plug-in">plug-in</a></li>
+							<li class="navi8"><a href="#FREESOFT">FREE SOFT /<br />SERVICE</a></li>
+							<li class="navi9"><a href="#COMMONFOLDA">COMMONFOLDA</a></li>
+							<li class="navi10"><a href="#TEMPLATE">TEMPLATE</a></li>
+							<li class="navi11"><a href="#WORK">WORK</a></li>
+							<li class="navi12"><a href="#STUDY">STUDY</a></li>
+							<li class="navi13"><a href="#CODE">CODE</a></li>
+						</ul>
+						-->
+					</li>
+      </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="outer">
+    <!-- <section id="top" class="t">
+      <div class="container tc">
+        <img src="http://hiroken.heteml.jp/kakunin/tsukada/guide/img/top.png" width="271" height="112" alt="HIROKEN WORKMANUAL"/>
+      </div>
+    </section> -->
+
+    <!--*** デバッグ方法・フロー ***-->
+    <!--1つ目-->
+      <!--タイトル-->
+    <h2 id="debug">DEBUG</h2>
+    <h3>デバッグ方法と流れ</h3>
+    <article class="container">
+      <section class="wrapper">
+        <div class="origin">
+          <div class="col contents contents--full">
+            <div class="title">
+              <h4 class="mTitle">作業前</h4>
+              <div class="sankaku"></div>
+            </div>
+
+            <div class="contSection">
+              <dl class="numbaring__list clearfix">
+                <dt class="num"></dt>
+                <dd class="numbaring__unit">
+                  依頼内容を洗い出し、リストアップをします。
+                </dd>
+                <dt class="num"></dt>
+                <dd class="numbaring__unit">
+                  必要であればイメージデータのスライスをします。
+                </dd>
+              </dl>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="wrapper">
+        <div class="origin">
+          <div class="col contents contents--full">
+            <div class="title">
+              <h4 class="mTitle">作業開始～完了</h4>
+              <div class="sankaku"></div>
+            </div>
+
+            <div class="contSection">
+              <dl class="numbaring__list clearfix">
+                <dt class="num"></dt>
+                <dd class="numbaring__unit">
+                  新規作成ページ以外はFTP上からバックアップを必ず取りましょう。
+                  <br>
+                  <p class="pointBox">
+                    <span class="desc">
+                      <i class="fa fa-lightbulb-o" aria-hidden="true"></i>cssやjsはHTML内に直接記述せず、外部ファイルとして読み込ませましょう。
+                    </span>
+                  </p>
+                </dd>
+                <dt class="num"></dt>
+                <dd class="numbaring__unit">
+                  コーディング完了後デバッグを行う。
+                </dd>
+                <dt class="num"></dt>
+                <dd class="numbaring__unit">
+                  デバッグ後、依頼者へ確認。
+                  <br>
+                  <p class="pointBox">
+                    <span class="desc"><i class="fa fa-lightbulb-o" aria-hidden="true"></i>依頼中に確認してもらう用のサーバーのURLと、本番環境へ適応する用のデータを2種用意します。直ぐにエンジニアへ依頼できるよう外部ファイル・imgのパス変更を行う等、予め準備しておくとスムーズです。</span>
+                  </p>
+                </dd>
+                <dt class="num"></dt>
+                <dd class="numbaring__unit">
+                  エンジニアへphp化の依頼をかけます。
+                  <br>
+                  <p class="pointBox">
+                    <span class="desc"><i class="fa fa-lightbulb-o" aria-hidden="true"></i>本番サーバーへCSSをUPしておきましょう。
+                  <br>HTMLファイルは不要です。</span>
+                </p>
+                </dd>
+                <dt class="num"></dt>
+                <dd class="numbaring__unit">
+                  作業完了後、LPの場合は作業に使用したデータ・作成したイメージデータを共有フォルダにUPします。
+                </dd>
+              </dl>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="wrapper">
+        <div class="origin">
+          <div class="col contents contents--full">
+            <div class="title">
+              <h4 class="mTitle">デバッグの大まかな流れ</h4>
+              <div class="sankaku"></div>
+            </div>
+
+            <h5 class="mTitle--leftBorder">
+              見た目・動きチェック
+            </h5>
+            <dl class="numbaring__list mb30 clearfix">
+              <dt class="num"></dt>
+              <dd class="numbaring__unit">
+                依頼内容と照らし合わせ、抜け漏れが無いかチェックします。
+              </dd>
+            </dl>
+
+            <h5 class="mTitle--leftBorder">
+              構文チェック・ブラウザチェック
+            </h5>
+
+            <dl class="numbaring__list clearfix">
+              <dt class="num"></dt>
+              <dd class="numbaring__unit">
+                構文やファイルに対して問題点が無いか抽出し、問題点があれば修正しましょう。
+              </dd>
+              <dd class="sansyou">
+                <a href="https://validator.w3.org/">https://validator.w3.org/</a>
+              </dd>
+
+              <dt class="num"></dt>
+              <dd class="numbaring__unit">
+                リンク切れがないかチェックします。
+              </dd>
+              <dd class="sansyou">
+                <a href="https://validator.w3.org/checklink">https://validator.w3.org/checklink</a>
+              </dd>
+
+              <dt class="num"></dt>
+              <dd class="numbaring__unit">
+                画像のaltが最適についているか、width,heightが書かれているか確認します。
+              </dd>
+
+              <dt class="num"></dt>
+              <dd class="numbaring__unit">
+                ここまで特に問題がなければ、最後にGoogleでも確認します。
+              </dd>
+              <dd class="sansyou">
+                <a href="https://developers.google.com/speed/pagespeed/insights/">https://developers.google.com/speed/pagespeed/insights/</a>
+              </dd>
+
+              <dt class="num"></dt>
+              <dd class="numbaring__unit">
+                必要に応じてHTMLを整形するツールを使いましょう。
+              </dd>
+              <dd class="sansyou">
+                <a href="https://dirtymarkup.com/">https://dirtymarkup.com/</a>
+              </dd>
+
+              <dt class="num"></dt>
+              <dd class="numbaring__unit">
+                その後各主要ブラウザで表示チェックを行います。
+              </dd>
+
+              <dd class="pointBox">
+                PC(Win)     : Chrome,Fire Fox,IE11,IE Edge
+                <br>PC(Mac)     : Safari,Chrome
+                <br>SP(iPhone)  : Safari,Chrome
+                <br>SP(Android) : Safari,Chrome
+              </dd>
+            </dl>
+          </div>
+        </div>
+      </section>
+    </article>
+    <!--*** / デバッグ方法・フロー ***-->
+
+		<!-- topへ戻る -->
+		<p id="page-top"><a href="#debug"><i class="far fa-lightbulb fa-4x"></i>PAGE TOP</a></p>
+
+    <footer class="t origin--footer">
+      <div class="container">
+        <small class="copyright">
+          Copylight(C)2017 HIROKEN.All rights reserved.<br/>【掲載記事・写真・イラストなどの無断複写・転載等を禁じます。】
+        </small>
+      </div>
+    </footer>
+  </div>
+  <!-- / .outer -->
+
+  <!-- Grab Google CDN's jQuery. fall back to local if necessary -->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script>window.jQuery || document.write("<script src='js/jquery-1.11.3.min.js'>\x3C/script>")</script>
+  <script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+  <!-- <script src="http://maps.google.com/maps/api/js?sensor=false"></script> -->
+	<script src="js/script.js"></script>
+	<script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+	<script type="text/javascript" src="js/jquery.sticky.js"></script>
+  <script type="text/javascript" src="js/jquery.dropdown.js"></script>
+</body>
+</html>

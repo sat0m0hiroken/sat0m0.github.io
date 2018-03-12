@@ -1,0 +1,798 @@
+<!doctype html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+	<title>SEOについて｜HIROKEN業務マニュアル</title>
+
+	<link href="css/reset.css" rel="stylesheet" type="text/css">
+  <link href="css/style.css" rel="stylesheet" type="text/css">
+	<link href="css/code.css" rel="stylesheet" type="text/css">
+  <link href="css/style.css" rel="stylesheet" type="droppy/css">
+	<link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
+
+  <meta property="og:title" content="" />
+  <meta property="og:description" content="" />
+  <meta property="og:url" content="" />
+  <meta property="og:image" content="" />
+  <!--footer下にscript関連あり-->
+
+</head>
+
+<body>
+  <!-- sp nav -->
+  <div class="nav--sp">
+    <a class="nav--sp__trigger js__sideMenuBtn">
+      <span></span>
+      <span></span>
+      <span></span>
+    </a>
+  </div>
+
+  <!-- メニュー展開時のoverlay -->
+  <div class="overlay js__overlay"></div>
+  <header class="header">
+    <div class="nav">
+      <nav class="side-menu">
+      <ul class="menu">
+				<li class="navi1"><a href="index.html">TOP</a></li>
+				<li class="navi2"><a href="code.html">CODE</a></li>
+				<li class="navi3"><a href="debug.html">DEBUG</a></li>
+				<li class="navi5"><a href="flow.html">FLOW</a></li>
+				<li class="navi4"><a href="regulation.html">REGULATION</a></li>
+				<li class="navi5"><a href="seo.html">SEO</a></li>
+				<li class="navi6 modh links">
+					<a id="links" href="#"><i class="sad fluffy far fa-caret-square-down fa-2x"></i></a>
+					<ul id="sub" class="sub">
+						<li class="navi7"><a href="#No1">SEOとは</a></li>
+						<li class="navi8"><a href="#No2">クローラーに評価<br />してもらうために</a></li>
+						<li class="navi9"><a href="#No3-1">キーワード</a></li>
+						<li class="navi10"><a href="#No3-2">ロングテール対策</a></li>
+						<li class="navi11"><a href="#No4">SEOに最適なタグ</a></li>
+						<li class="navi12"><a href="#No5">ナビゲーション</a></li>
+						<li class="navi13"><a href="#No6">コンテンツ</a></li>
+						<li class="navi14"><a href="#No7">PCサイトの<br />モバイル対応</a></li>
+						<li class="navi15"><a href="#No8">使えるSEO<br />関連ツール</a></li>
+					</ul>
+				</li>
+				<!--
+        <li class="navi1"><a href="/">TOP</a></li>
+        <li class="navi1"><a href="index.html#plug-in">PLUG-IN</a></li>
+        <li class="navi5"><a href="index.html#FREESOFT">FREE SOFT / SERVICE</a></li>
+        <li class="navi2"><a href="index.html#COMMONFOLDA">COMMONFOLDA</a></li>
+        <li class="navi3"><a href="index.html#TEMPLATE">TEMPLATE</a></li>
+        <li class="navi4"><a href="index.html#WORK">WORK</a></li>
+        <li class="navi5"><a href="flow.html">PRODUCTION FLOW</a></li>
+        <li class="navi6"><a href="index.html#STUDY">STUDY</a></li>
+        <li class="navi7"><a href="code.html">CODE</a></li>
+        <li class="navi8"><a href="regulation.html">REGULATION</a></li>
+        <li class="navi9"><a href="debug.html">DEBUG</a></li>
+				-->
+      </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="outer">
+    <!-- <section id="top" class="t">
+      <div class="container tc">
+        <img src="http://hiroken.heteml.jpimg/top.png" width="271" height="112" alt="HIROKEN WORKMANUAL"/>
+      </div>
+    </section> -->
+
+    <!--*** STUDY ***-->
+    <h2 id="STUDY">STUDY</h2>
+    <h3>SEOについて</h3>
+    <article class="container">
+      <section class="wrapper">
+        <div class="origin">
+          <div class="contents contents--full">
+
+            <div class="title">
+              <h4 class="mTitle" id="toc">目次</h4>
+              <div class="sankaku"></div>
+            </div>
+
+            <ul class="toc">
+              <li class="toc__unit"><a href="#No1"><span class="fwb">1.</span> SEOとは</a></li>
+              <li class="toc__unit"><a href="#No2"><span class="fwb">2.</span> クローラーに評価してもらうために</a></li>
+              <li class="toc__unit"><a href="#No3-1"><span class="fwb">3-1.</span> キーワード</a></li>
+              <li class="toc__unit"><a href="#No3-2"><span class="fwb">3-2.</span> ロングテール対策</a></li>
+              <li class="toc__unit"><a href="#No4"><span class="fwb">4.</span> SEOに最適なタグ</a></li>
+              <li class="toc__unit"><a href="#No5"><span class="fwb">5.</span> ナビゲーション</a></li>
+              <li class="toc__unit"><a href="#No6"><span class="fwb">6.</span> コンテンツ</a></li>
+              <li class="toc__unit"><a href="#No7"><span class="fwb">7.</span> PCサイトのモバイル対応</a></li>
+              <li class="toc__unit"><a href="#No8"><span class="fwb">8.</span> 使えるSEO関連ツール</a></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- SEOとは -->
+      <section class="wrapper">
+        <div class="t origin">
+          <div class="col contents contents--full">
+
+            <div class="title">
+              <h4 class="mTitle" id="No1">1. SEOとは</h4>
+              <div class="sankaku"></div>
+            </div>
+
+            <p>自社のHPを見つけやすくすることです。
+              <br>検索結果で上位に上がるには、ユーザーにとって質の良いHPであることが大切です。
+              <br>質の良いHPを表示するために、クローラー(サイトの情報収集専用ロボ)を使って、HPに関する情報を収集して日々チェックしています。
+              <br>2015年4月21日以降Googleが発表したモバイルフレンドリー化後は、
+              <br>スマホで検索した場合スマホ対応のサイトが上位にくるようになっています。
+              <br>
+              <br>余談ですがこのクローラーは会員制サイトなどにも入り込んで情報収集をしています。
+            </p>
+
+            <!-- <p class="toTop"><a href="#toc">目次へ戻る</a></p> -->
+          </div>
+        </div>
+      </section>
+      <!-- / SEOとは -->
+
+      <section class="wrapper">
+        <div class="t origin">
+          <div class="col contents contents--full js__padding">
+
+            <div id="No2" class="title">
+              <h4 class="mTitle">2. クローラーに評価してもらうために</h4>
+              <div class="sankaku"></div>
+            </div>
+
+            <div class="sectionBox">
+              <h5 class="mTitle--bg">URLパラメータを設定する</h5>
+              <p>
+                通常何も設定をしないと「https://」と「http://」、「www有り無し」それぞれにサイトが存在しています。
+                <br>この同一内容のページが複数存在状態ではクローラーは低評価を付けるため、
+                <br>URLを統一させる作業を行います。(301リダイレクト設定をします)
+                <br>ページを統一することにより、評価が下がりにくくなります。
+              </p>
+            </div>
+
+            <div class="sectionBox">
+              <h5 class="mTitle--bg">canonicalでURLを統一する</h5>
+
+              <p>
+                似た内容のページが複数存在するとクローラーは同一内容のページが複数存在すると低評価になるため、
+                <br>Head内にcanonicalタグを指定し、クローラーに巡回させたいページURLを指定します。
+              </p>
+
+              <div class="pointBox">
+                <p>
+                  <pre class="viewCode"><code>&lt;head&gt;
+&lt;link rel="canonical" href="巡回させたいURL”&gt;
+&lt;/head&gt;</code></pre>
+                </p>
+              </div>
+            </div>
+
+            <div class="sectionBox">
+              <h5 class="mTitle--bg">必要箇所にno index , no followタグの設置<a href="#No4">(詳細は4)</a></h5>
+
+              <p>
+                このタグをhead内に記述すると、検索結果から表示されなくなります。
+                <br>インデックスされたくない、重複するページがある場合に設置するのが良いでしょう。
+                <br>nofollowはmetaタグ以外にaタグにも指定できます。
+              </p>
+
+              <div class="pointBox">
+                <p>
+                  <pre class="viewCode"><code>&lt;meta name=”robots” content=”noindex, nofollow”&gt;</code></pre>
+                </p>
+              </div>
+            </div>
+
+            <div class="sectionBox">
+              <h5 class="mTitle--bg">クローラー用にサイトマップ(sitemap.xml)の準備をする<a href="#No5">(詳細は5)</a></h5>
+
+              <p>クローラー用にsitemap.xmlでページのサイトマップを作ります。
+                <br>同時にユーザー向けにサイトマップページを作りましょう。(内部リンクを増やす、リンク内にキーワードをはめ込む狙い)
+              </p>
+            </div>
+
+            <div class="sectionBox">
+              <h5 class="mTitle--bg">内部リンクにキーワードを絡める</h5>
+
+              <p>「TOPへ戻る」　→　「キーワード名　TOPへ戻る」のようにキーワードを絡めると、
+                <br>被リンクとして外部リンクと同様の効果があります。
+                <br>クローラーの巡回のしやすさを高める効果もあります。
+              </p>
+            </div>
+
+            <div class="sectionBox">
+              <h5 class="mTitle--bg">URLは分かり易くする<a href="#No5">(詳細は5)</a></h5>
+
+              <p>リンクをアンカーテキストとして利用する人もいるため、分かりやすいURL名だと、
+                <br>URLを辿る前の時点でどんなページか認識しやすくなります。
+                <br>その為コンテンツと関連性のあるURLにしましょう。
+                <br>ただし、キーワードを過度に使わないようにしましょう。(xxx-cheesecake-xxx.html 等)
+              </p>
+
+              <div class="pointBox">
+                <p>
+                  <span class="fwb">例：</span>
+                  <br>何のページか分かりにくい
+                  <br>→http://xxx.com/contents01/page1.html/
+                  <br>
+                  <br>メニュー内容のページだと分かりやすい
+                  <br>→http://xxx.com/<span class="important">menu/cheesecake/</span>
+                </p>
+              </div>
+            </div>
+
+            <!-- <p class="toTop"><a href="#toc">目次へ戻る</a></p> -->
+          </div>
+        </div>
+      </section>
+      <!-- / 2. クローラーに認識してもらうために -->
+
+      <section class="wrapper">
+        <div class="t origin">
+          <div class="col contents contents--full">
+
+            <div id="No3-1" class="title">
+              <h4 class="mTitle">3-1. キーワード</h4>
+              <div class="sankaku"></div>
+            </div>
+
+            <div class="sectionBox">
+              <h5 class="mTitle--bg">対策キーワード選び</h5>
+              <p>
+                2017年のGoogle検索順位別クリック率のデータが公表されています。
+                <br>参考：<a href="https://www.internetmarketingninjas.com/blog/google/announcing-2017-click-rate-study/">https://www.internetmarketingninjas.com/blog/google/announcing-2017-click-rate-study/</a>
+                <br>
+                <br>1位は21.12%に対し10位は1.64%と約20%の差があります。
+                <br>かなりの人数が検索結果ページを下の方までスクロールしないことが分かりますね…
+                <br>なので<span class="markerPen">対策キーワード選び</span>は重要です。
+                <br><span class="markerPen">HPでアピールしたいサービスの特徴を象徴するシンプルな単語</span>にし、
+                <br>その上でインターネット上にて見つけられやすいキーワードに直すといった、
+                <br>「自社と市場とのすり合わせ」の作業が対策キーワード選びになります。
+                <br>キーワード選びには<a href="https://adwords.google.com/intl/ja_jp/home/tools/keyword-planner/">「キーワードプランナー」</a>を利用し、
+                <br>月間検索数が多いワードほど検索時に引っかかりやすくなります。
+              </p>
+
+              <div class="pointBox">
+                <p>
+                  <span class="fwb">例：</span>
+                  <br>良い選び方　「渋谷　イタリアン」
+                  <br>改善点のある選び方　「渋谷　パスタ」
+                </p>
+              </div>
+
+              <p>
+                ↑キーワードプランナーによる月間検索数では、「渋谷　イタリアン」が6,600、「渋谷　パスタ」が2,400と、
+                <br>「渋谷　イタリアン」のほうが検索回数を上回っているためです。
+              </p>
+            </div>
+
+            <div class="sectionBox">
+              <h5 class="mTitle--bg">ユーザーのニーズを理解する</h5>
+
+              <p>
+                キーワードの調査を行うと、ユーザーの隠れたニーズを知ることが出来ます。
+              </p>
+
+              <div class="pointBox">
+                <p>
+                  <span class="fwb">例：</span>
+                  <br>「加圧トレーニングのキーワードを調査していたら、
+                  <br>「加圧トレーニング　綺麗　痩せたい」という複合検索が多かった！」
+
+                </p>
+              </div>
+
+              <p>
+                ↑筋トレ目的でサイトを打ち出すより、痩せる事・美容に良い事をメインに打ち出した方が良いと分かります。
+              </p>
+            </div>
+
+            <div class="sectionBox">
+              <h5 class="mTitle--bg">キーワードのミスマッチを防ぐ</h5>
+
+              <p>
+                例えば「ケーキ」で検索する人と「ケーキ＋材料」＆「ケーキ＋地名」で検索する人の求めるものはそれぞれ違います。
+                <br>「ケーキ」だけで検索する人はケーキのレシピや種類を調べたいかもしれませんが、
+                <br>「ケーキ」という単語自体の意味を検索する人もいると考えられます。
+                <br>ユーザーのニーズが違うので、自社サービス等でユーザーに提供できるものからキーワードを絞り込んでいくのが良いです。
+              </p>
+            </div>
+
+            <div class="sectionBox">
+              <h5 class="mTitle--bg">主張や表現がブレる（複数存在する）と評価されない</h5>
+
+              <p>
+                同じ意味を持つ類似単語を複数使用しないようにしましょう。
+                <br>最近では略語のような別の表記も同じ意味と解釈されるようになっています。
+                <br>ですが、完全一致しているキーワードの方が良いので、キーワードプランナーを使用し、
+                <br>検索回数が多いキーワードを優先的に使用しましょう。
+              </p>
+
+              <div class="pointBox">
+                <p>
+                  <span class="fwb">NG</span>
+                  <br>・ホームページ、HP、ウェブサイト　等の同じ意味を持つ類似キーワード
+                  <br>・高級、格安の正反対の意味を持つキーワードを2つ存在させること
+                </p>
+              </div>
+            </div>
+
+            <div class="sectionBox">
+              <h5 class="mTitle--bg">追加する内容の軸になる</h5>
+
+              <p>
+                情報を継続配信するためのテーマ選びにも役立ちます。
+                <br>多数検索されているキーワードから、そのキーワードに沿う新規ページの作成も行えるようになります。
+              </p>
+            </div>
+
+            <div class="sectionBox">
+              <h5 class="mTitle--bg">すぐに効果が望めない場合</h5>
+
+              <p>
+                成果の出やすい出にくいものも存在するため、
+                <br>ユーザー目線で情報提供をすることが大切です。
+              </p>
+
+              <div class="pointBox">
+                <p><span class="fwb">まとめ</span></p>
+                <p>
+                  ・キーワード選びを適切に行う、ユーザーの求めるコンテンツを用意すれば自然とSEOの効果が上がる
+                  <br>・ユーザー目線と提できるきるものをマッチさせたキーワードを選ぶ
+                </p>
+              </div>
+            </div>
+
+            <!-- <p class="toTop"><a href="#toc">目次へ戻る</a></p> -->
+          </div>
+        </div>
+      </section>
+      <!-- / 3-1.キーワード対策 -->
+
+      <section class="wrapper">
+        <div class="t origin">
+          <div class="col contents contents--full">
+
+            <div id="No3-2" class="title">
+              <h4 class="mTitle">3-2. ロングテール対策</h4>
+              <div class="sankaku"></div>
+            </div>
+
+            <div class="sectionBox">
+              検索ワードにおおまかに3つカテゴライズされたワードがあります。
+              <br>その中でもロングテール対策は、ミドルワードからスモールワードにかけて
+              <br><span class="tdu">検索頻度が低いが購入率の高い（売上に直結しやすい）キーワード</span>で対策を行うことを<span class="markerPen">ロングテール対策</span>と言います。
+
+              <div class="pointBox">
+                <p>
+                  <span class="fwb">キーワードのカテゴリ：</span>
+                  <br>①ビッグワード
+                  <br>②ミドルワード
+                  <br>③モールワード
+                </p>
+              </div>
+            </div>
+
+            <div class="sectionBox">
+              <p>
+                <span class="markerPen">① ビッグワード</span> … 誰しもが共通して使う（連想する）ワード
+                <br>
+                <br>
+                特徴：抽象的
+                <br>キーワードパターン：少ない
+                <br>検索数：多い
+                <br>SEO対策コスト：高い
+                <br>
+                <br>例：海外旅行、探偵、興信所など
+              </p>
+            </div>
+
+            <div class="sectionBox">
+              <p>
+                <span class="markerPen">② ミドルワード</span> … ビッグワードとスモールワードの間のワード
+                <br>
+                <br>
+                特徴：抽象的
+                <br>キーワードパターン：少ない
+                <br>検索数：多い
+                <br>SEO対策コスト：高い
+                <br>
+                <br>例：海外ツアー、ハワイ　ホテル
+              </p>
+            </div>
+
+            <div class="sectionBox">
+              <p>
+                <span class="markerPen">② スモールワード</span> … 個人のニーズや思考が反映されたワード
+                <br>
+                <br>
+                特徴：具体的
+                <br>キーワードパターン：多い
+                <br>検索数：少ない
+                <br>SEO対策コスト：安い
+                <br>
+                <br>例：海外ツアー　ハワイ　ダイビング、ハワイ　ホテル　アメニティ
+                <br>
+                <br>1～3までのパターンは、ユーザーが情報収集のどの段階にいるのかによって使い分けられます。
+                <br>検索に使用される全てのワードの内約60％がスモールワードであると言われており、
+                <br>「※検索ワードのパーソナライズ化」に対応することが、ロングテール対策においては重要となります。
+                <br><span class="annotation">※パーソナライズ　…　個々人の興味・関心・行動に合わせてサービスを最適化すること。</span>
+              </p>
+
+              <div class="pointBox">
+                <p>
+                  <span class="fwb">ロングテール対策の特徴</span>
+                  <br>・検索数の少ない、複合キーワードで検索順位を上位表示にする
+                  <br>・不特定多数のキーワードで上位表示にする
+                </p>
+              </div>
+            </div>
+
+            <div class="sectionBox">
+              <h5 class="mTitle--bg">シソーラス</h5>
+
+              <p>
+                シソーラスとは類語のことです。
+                <br>ただし、前途記述した同じ意味を持つ類似単語を複数使用しないようにしなければならないと書きましたが、
+                <br>最終的にはトラフィックの多い単語にフォーカスして統一していく方がベストなようです。
+              </p>
+            </div>
+
+            <!-- <p class="toTop"><a href="#toc">目次へ戻る</a></p> -->
+          </div>
+        </div>
+      </section>
+      <!-- / 3-2.ロングテール対策 -->
+
+      <section class="wrapper">
+        <div class="t origin">
+          <div class="col contents contents--full">
+
+            <div id="No4" class="title">
+              <h4 class="mTitle">4. 最適なタグ設定</h4>
+              <div class="sankaku"></div>
+            </div>
+
+            <div class="sectionBox">
+              <h5 class="mTitle--bg">なるべくソースコードをシンプルに圧縮する</h5>
+              <p>
+                ページの表示が遅くなると低評価の対象になるので、長いコードは圧縮すると良いです。
+                <br>主にjsやjQueryのプラグインが重たくなる要因です。
+              </p>
+            </div>
+
+            <div class="sectionBox">
+              <h5 class="mTitle--bg">ページタイトルは&lt;title&gt;タグで指定</h5>
+              <p>
+                全ページ固有なタイトルにし被らないようにします。
+                <br>全角30～35時程度が目安です。
+                <br>ページタイトルの内容は検索結果に表示されます。
+                <br>検索キーワードと一致していればタイトルに書かれたテキストが太字になるため、
+                <br>ユーザーは関連の有るサイトとして把握しやすくなります。
+                <br>TOPページにはサイト名や会社名を載せ、深い階層には各ページの内容に適したタイトルを付けるのが望ましいです。
+              </p>
+
+              <div class="pointBox">
+                <p>
+                  <span class="fwb">&lt;title&gt;タグまとめ</span>
+                  <br>・各ページにユニークなタイトル名をつける
+                  <br>・シンプルで説明的なタイトルを付ける
+                  <br>・titleに入れる文字数は全角30～35文字以内
+                </p>
+              </div>
+            </div>
+
+            <div class="sectionBox">
+              <h5 class="mTitle--bg">&lt;meta&gt;タグでdescriptionを設定</h5>
+
+              <p>
+                <br>metaタグは検索結果を表示した際に現れるページの説明文のことです。
+                <br>Descriptionは全角で140時文字以下に収まるように表記します。
+              </p>
+
+              <div class="pointBox">
+                <pre class="viewCode"><code>&lt;meta name="description" content="140文字以内 "&gt;</code></pre>
+                <p class="sectionImg">
+                <img src="img/sansyou/description-img.jpg" alt="実際に表示されるdescription">
+                </p>
+                <span class="annotation">↑上記のように検索結果の時表示されます。</span>
+              </div>
+            </div>
+
+            <div class="sectionBox">
+              <h5 class="mTitle--bg">画像のファイルサイズを軽くする</h5>
+              <p>
+                矢印やアイコン等共通で多用する画像はCSSスプライトで表示するのもありですね。
+                <br>&lt;img&gt;タグを使用するより、表示速度が変わるようです。
+              </p>
+            </div>
+
+            <div class="sectionBox">
+              <h5 class="mTitle--bg">&lt;img&gt;タグのalt属性を記載する</h5>
+
+              <p>
+                画像を使用している際、何らかのエラーで画像が表示されない時に画像だと認識させるための属性です。
+                <br>Altテキストは画像の代替テキストになるよう入力しましょう。
+                <br>その際、altテキストは長すぎず、単語ではなく文章体で入力しましょう。
+              </p>
+            </div>
+
+            <div class="sectionBox">
+              <h5 class="mTitle--bg">画像ファイル名を画像の内容に合った名前にする</h5>
+
+              <p>
+                クローラーは画像のファイル名も認識するためです。
+                <br>日本語ファイル名も認識するようです。
+              </p>
+            </div>
+
+            <div class="sectionBox">
+              <h5 class="mTitle--bg">text-indent:-9999pxは使わない</h5>
+              <p>
+                画面外に飛ばす記述はスパムとみなされます。
+                <br>また一部のデバイスではパフォーマンスが悪くなるようです。
+                <br>テキストを飛ばす場合は素直に画像を使うか、
+                <br>下記の方法でしたらテキストを飛ばすことが出来ます。
+                <br>隠れる要素はブロックレベルである必要があります。
+              </p>
+
+              <div class="pointBox">
+                <p data-height="309" data-theme-id="dark" data-slug-hash="WZpzpd" data-default-tab="html,result" data-user="__sk__" data-embed-version="2" data-pen-title="テキストを飛ばして画像のみ表示" data-preview="true" class="codepen">See the Pen <a href="https://codepen.io/__sk__/pen/WZpzpd/">テキストを飛ばして画像のみ表示</a> by Saki Tsukada (<a href="https://codepen.io/__sk__">@__sk__</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+              </div>
+            </div>
+
+            <div class="sectionBox">
+              <h5 class="mTitle--bg">&lt;h&gt;タグ（見出しタグ）</h5>
+
+              <p>
+                HTMLの構造に沿って記述します。
+                <br>&lt;h1&gt;タグは1ページにつき1つ重要なワードを設定し、
+                <br>&lt;h1&gt;タグ、次に&lt;h1&gt;タグに続く段落の要素を記述する。（キーワードを詰め込みすぎない）
+                <br>&lt;h1&gt;タグにはキーワードを文頭に含有させます。
+                <br>&lt;h1&gt; → &lt;h2&gt; → &lt;h3&gt; → &lt;h4&gt; → &lt;h5&gt; → &lt;h6&gt;の順番でソースを書くと良いでしょう。
+              </p>
+
+              <div class="pointBox">
+                <p><span class="fwb">Googleの推奨する適切な&lt;h1&gt;タグの付け方</span>
+                  <br>1.  ページの構成と関係なく見出しタグでテキストを囲わない
+                  <br>2.  &lt;em&gt;や&lt;strong&gt;が適切な箇所で見出しタグを使用しない
+                  <br>3.  見出しタグのサイズの使い分けを不規則にしない
+                  <br>4.  ページ内で見出しタグの乱用はしない
+                </p>
+              </div>
+
+              <div class="sectionBox">
+                <p>
+                  ※h1タグに画像を使用するのは問題ありませんが、テキストの方がベターです。
+                  <br>画像にする場合はalt属性を記述するのを忘れないようにしましょう。
+                </p>
+              </div>
+
+              <div class="sectionBox">
+                <div class="pointBox">
+                  <p><span class="fwb">&lt;h1&gt;タグの適切な設置</span>
+                    <pre><code><span class="annotation"><span class="viewCode">&lt;h1&gt;ブログの記事タイトル&lt;/h1&gt;</span>
+&lt;h2&gt;ブログの記事内で使用する中見出しタグ&lt;/h2&gt;
+&lt;h3&gt;～&lt;h6&gt;ブログの記事内で使用する小見出し</span></code></pre>
+                  </p>
+                  <br>
+                  <p><span class="fwb">適切でない設置</span>
+                    <pre><code><span class="annotation"><span class="viewCode">&lt;h1&gt;ブログのタイトル&lt;/h1&gt;</span>
+&lt;h2&gt;ブログの記事タイトル&lt;/h2&gt;
+&lt;h3&gt;～&lt;h6&gt;ブログの本文中で使用するタグ</span></code></pre>
+                  </p>
+                </div>
+
+                <p>
+                  サイトのロゴにh1タグを設置しがちですが、特にブログやメディアサイトの場合は気をつけましょう。
+                </p>
+              </div>
+
+              <div class="sectionBox">
+
+                <div class="pointBox">
+                  <p>
+                    <span class="fwb">&lt;h1&gt;タグの実装例：グノシー</span>
+                    <br>TOPページ：
+                    <br>サイトのタイトルに&lt;h1&gt;タグを使用しています。
+                  </p>
+
+                  <p class="sectionImg"><img src="img/sansyou/h1-gnocy-top.jpg" alt="グノシーのTOPページのh1タグの使い方"></p>
+
+                  <p>記事詳細ページ：
+                    <br>記事タイトルに&lt;h1&gt;タグを使用し、&lt;h2&gt;タグはメインコンテンツ内の人気記事のタイトルに、
+                    <br>サイドメニューの注目のキーワード等には&lt;h3&gt;タグが使用されています。
+                  </p>
+
+                  <p class="sectionImg"><img src="img/sansyou/h1-gnocy-detail.jpg" alt="グノシーの記事詳細ページのh1タグの使い方"></p>
+                </div>
+
+                <p>
+                  グノシーのようにTOPページと下層ページとでマークアップの仕方を変える方法もあります。
+                  <br>この場合はHTMLを2パターン分事前に書いておき、CSSやjQueryで表示非表示切り替えを行っています。
+                </p>
+              </div>
+            </div>
+
+            <!-- <p class="toTop"><a href="#toc">目次へ戻る</a></p> -->
+          </div>
+        </div>
+      </section>
+      <!-- / 4. 最適なタグ設定 -->
+
+
+      <section class="wrapper">
+        <div class="t origin">
+          <div class="col contents contents--full">
+
+            <div id="No5" class="title">
+              <h4 class="mTitle">5. ナビゲーション</h4>
+              <div class="sankaku"></div>
+            </div>
+
+            <div class="sectionBox">
+              <h5 class="mTitle--bg">ディレクトリ構造を把握する</h5>
+              <p>
+                サイトのナビゲーションはユーザーが迅速に目的のコンテンツにたどり着けるようにするため重要です。
+                <br>クローラーにも同様のことが言えます。
+                <br>
+                <br>TOPを基準にディレクトリ構造も考えます。
+                <br>ユーザーがどのページからより詳細な内容のページにたどり着くのか、導線を考える必要があります。
+                <br>そしてコンテンツの整理をしましょう。コンテンツを適切に分類することにより、
+                <br>ユーザーは求める情報へいち早くたどり着けることが出来ます。
+                <br>あまりに深い階層だと評価に影響が出てしまうので注意です。
+              </p>
+            </div>
+
+            <div class="sectionBox">
+              <h5 class="mTitle--bg">パンくずリスト</h5>
+              <p>
+                ページの構造が決まったら、サイトの上部にパンくずリストを設置しましょう。
+                <br>この時、TOPへ戻るテキストリンクはなるべくキーワードを織り交ぜるとSEOに効果があります。
+                <br>何よりユーザーの利便性も上がるので、分かりやすいサイトになります。
+              </p>
+            </div>
+
+            <div class="sectionBox">
+              <h5 class="mTitle--bg">サイトマップ</h5>
+
+              <p>
+                Sitemap.xmlがクローラーがサイトのマップを読み込むためのコードです。
+                <br>サイト内のURLを集める手掛かりとなるため、クローラがより情報収集しやすくなります。
+                <br>
+                <br>HTMLで作られるサイトマップはユーザービリティの改善やSEO効果が見込めます。
+                <br>ファイル名はxmlサイトはSitemap(頭だけ大文字)、HTML形式で作るサイトマップはsitemap（すべて小文字）です。
+              </p>
+            </div>
+
+            <div class="sectionBox">
+              <h5 class="mTitle--bg">404エラーぺージ</h5>
+              <p>
+                作成しておくと、UXを高めてくれます。
+                <br>ただしTOPとデザインが合わない場合は使わないようにしましょう。
+                <br>そして&lt;no index&gt;タグを付けるなどし、クローラーが検索エンジンへ引っ張ってこないようにする必要があります。
+              </p>
+            </div>
+
+            <!-- <p class="toTop"><a href="#toc">目次へ戻る</a></p> -->
+          </div>
+        </div>
+      </section>
+      <!-- / 5.ナビゲーション -->
+
+      <section class="wrapper">
+        <div class="t origin">
+          <div class="col contents contents--full">
+
+            <div id="No6" class="title">
+              <h4 class="mTitle">6. コンテンツ</h4>
+              <div class="sankaku"></div>
+            </div>
+
+            <div class="sectionBox">
+              <p>
+                質の良いコンテンツページを増やすことによりユーザーによって外部リンクが貼られていき、
+                <br>被リンク数が増える可能性が高くなります。
+                <br>そうなるとGoogleから高評価を受けやすいので、
+                <br>ユーザーのニーズとマッチしたコンテンツページを作成しましょう。
+                <br>継続的に作成できるのが理想です。
+                <br>サジェストを参考にし、多くの検索内容を想定しながらコンテンツを作成する（キーワードを織り交ぜる）と
+                <br>検索順位に良い結果が反映されやすくなります。
+                <br>コンテンツは2000文字～2500文字ほどの文章量があると良いでしょう。
+              </p>
+            </div>
+
+            <!-- <p class="toTop"><a href="#toc">目次へ戻る</a></p> -->
+          </div>
+        </div>
+      </section>
+      <!-- / 6.コンテンツ -->
+
+      <section class="wrapper">
+        <div class="t origin">
+          <div class="col contents contents--full">
+
+            <div id="No7" class="title">
+              <h4 class="mTitle">7. PCサイトのモバイル対応</h4>
+              <div class="sankaku"></div>
+            </div>
+
+            <div class="sectionBox">
+              <p class="mtM">
+                PCはPCサイト、SPはSPのサイトを表示するように区別します。
+                <br>SPでPCサイトにアクセスした際は、SPサイトになるようリダイレクトを設定し、同じページへ飛ばしましょう。
+                <br>PCサイトとSPサイトを区別することにより、モバイルフレンドリー化していると見なされ評価がより良くなるでしょう。
+                <br>
+                <br>逆にPCでSPサイトにアクセスした際は、リダイレクトする必要は特にないですが、
+                <br>フッター等の下部にPC版のサイト切り替えのリンクを貼ると親切だと思います。
+              </p>
+            </div>
+
+            <!-- <p class="toTop"><a href="#toc">目次へ戻る</a></p> -->
+          </div>
+        </div>
+      </section>
+      <!-- / 7. PCサイトのモバイル対応 -->
+
+      <section class="wrapper">
+        <div class="t origin">
+          <div class="col contents contents--full">
+
+            <div id="No8" class="title">
+              <h4 class="mTitle">8. 使えるSEO関連ツール</h4>
+              <div class="sankaku"></div>
+            </div>
+
+            <div class="sectionBox">
+              <p class="mtM">・キーワードプランナー
+                <br><a href="https://adwords.google.com/intl/ja_jp/home/tools/keyword-planner/">https://adwords.google.com/intl/ja_jp/home/tools/keyword-planner/</a>
+                <br>
+                <br>・Google Search Console（旧ウェブマスターツール）
+                <br><a href="https://www.google.com/webmasters/tools/home?hl=ja">https://www.google.com/webmasters/tools/home?hl=ja</a>
+                <br>
+                <br>・SEOチェキ
+                <br><a href="http://seocheki.net/">http://seocheki.net/</a>
+              </p>
+            </div>
+
+            <!-- <p class="toTop"><a href="#toc">目次へ戻る</a></p> -->
+          </div>
+        </div>
+      </section>
+      <!-- / 8. 使えるSEO関連ツール -->
+
+
+    </article>
+    <!--*** / STUDY ***-->
+
+		<!-- topへ戻る -->
+		<p id="page-top"><a href="#STUDY"><i class="far fa-lightbulb fa-4x"></i>PAGE TOP</a></p>
+
+    <footer class="t origin--footer">
+      <div class="container">
+        <small class="copyright">
+          Copylight(C)2017 HIROKEN.All rights reserved.<br />【掲載記事・写真・イラストなどの無断複写・転載等を禁じます。】
+        </small>
+      </div>
+    </footer>
+  </div>
+  <!-- / .outer -->
+
+	<!-- Grab Google CDN's jQuery. fall back to local if necessary -->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script>window.jQuery || document.write("<script src='js/jquery-1.11.3.min.js'>\x3C/script>")</script>
+  <script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+  <!-- <script src="http://maps.google.com/maps/api/js?sensor=false"></script> -->
+  <script src="js/script.js"></script>
+	<script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+	<script type="text/javascript" src="js/jquery.sticky.js"></script>
+  <script type="text/javascript" src="js/jquery.dropdown.js"></script>
+</body>
+</html>

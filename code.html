@@ -1,0 +1,1795 @@
+<!doctype html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Code｜HIROKEN業務マニュアル</title>
+
+	<link href="css/reset.css" rel="stylesheet" type="text/css">
+  <link href="css/style.css" rel="stylesheet" type="text/css">
+	<link href="css/code.css" rel="stylesheet" type="text/css">
+  <link href="css/style.css" rel="stylesheet" type="droppy/css">
+	<link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
+
+  <meta property="og:title" content="" />
+  <meta property="og:description" content="" />
+  <meta property="og:url" content="" />
+  <meta property="og:image" content="" />
+  <!--footer下にscript関連あり-->
+
+</head>
+
+<body class="page--code">
+  <!-- sp nav -->
+  <div class="nav--sp">
+    <a class="nav--sp__trigger js__sideMenuBtn">
+      <span></span>
+      <span></span>
+      <span></span>
+    </a>
+  </div>
+
+  <!-- メニュー展開時のoverlay -->
+  <div class="overlay js__overlay"></div>
+  <header class="header">
+    <div class="nav">
+      <nav class="side-menu">
+				<ul class="menu">
+					<li class="navi1"><a href="index.html">TOP</a></li>
+				  <li class="navi2"><a href="code.html">CODE</a></li>
+				  <li class="navi3"><a href="debug.html">DEBUG</a></li>
+					<li class="navi5"><a href="flow.html">FLOW</a></li>
+					<li class="navi4"><a href="regulation.html">REGULATION</a></li>
+					<li><a href="seo.html">SEO</a></li>
+					<li class="navi5 modh links">
+						<a id="links" href="#"><i class="sad fluffy far fa-caret-square-down fa-2x"></i></a>
+						<ul id="sub" class="sub">
+							<li class="navi6"><a href="#No1">要素を上下・<br />左右・中央に寄せる</a></li>
+							<li class="navi7"><a href="#No2">HTML5で<br />レイアウトコーディング</a></li>
+							<li class="navi8"><a href="#No3">CSSで作る<br />タイトルデザイン</a></li>
+							<li class="navi9"><a href="#No4">使いやすそうなtable</a></li>
+							<li class="navi10"><a href="#No5">CSSセレクタのおさらい</a></li>
+						</ul>
+					</li>
+    	  </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="outer">
+    <!-- <section id="top" class="t">
+      <div class="container tc">
+        <img src="http://hiroken.heteml.jp/kakunin/tsukada/guide/img/top.png" width="271" height="112" alt="HIROKEN WORKMANUAL"/>
+      </div>
+    </section> -->
+
+    <!-- 動的ボタン
+    <button class="btn2 style2">
+      <a href="demo.html#demo2">
+        <i class="fa fa-check" aria-hidden="true"></i>DEMOページでコードを見る
+      </a>
+    </button>-->
+
+    <!--*** STUDY ***-->
+    <h2 id="STUDY">SOURCE CODE</h2>
+    <h3>コーディングが捗りそうなソースコードまとめ</h3>
+    <article class="container">
+
+      <!-- 目次 -->
+      <section class="wrapper">
+        <div class="origin">
+          <div class="contents contents--full">
+
+            <div class="title">
+              <h4 id="toc" class="mTitle">目次</h4>
+              <div class="sankaku"></div>
+            </div>
+
+            <!-- jquery / Java Script -->
+            <h4 class="mTitle--leftBorder">
+              jQuery / Java Script
+            </h4>
+            <dl class="toc numbaring__list clearfix">
+              <dt class="num"></dt>
+              <dd class="toc__unit numbaring__unit">
+                <a href="http://hiroken.heteml.jp/kakunin/saito/mokuhyo2017/jquery.html">jQuery まとめページはこちら</a>
+              </dd>
+            </dl>
+
+            <!-- Web Fonts -->
+            <h4 class="mTitle--leftBorder">
+              Web Fonts
+            </h4>
+            <dl class="toc numbaring__list clearfix">
+              <dt class="num"></dt>
+              <dd class="toc__unit numbaring__unit">
+                <a href="http://hiroken.heteml.jp/kakunin/saito/mokuhyo2017/jquery.html">Web Fonts（Google Fonts）の利用方法</a>
+              </dd>
+            </dl>
+
+            <!-- HTML / CSS -->
+            <h4 class="mTitle--leftBorder">
+              HTML / CSS
+            </h4>
+            <dl class="toc numbaring__list clearfix">
+              <dt class="num"></dt>
+              <dd class="toc__unit numbaring__unit">
+                <a href="#No1">要素を上下・左右・中央に寄せる</a>
+              </dd>
+              <dt class="num"></dt>
+              <dd class="toc__unit numbaring__unit">
+                <a href="#No2">HTML5でレイアウトコーディング</a>
+              </dd>
+              <dt class="num"></dt>
+              <dd class="toc__unit numbaring__unit">
+                <a href="#No3">CSSで作るタイトルデザイン</a>
+              </dd>
+              <dt class="num"></dt>
+              <dd class="toc__unit numbaring__unit">
+                <a href="#No4">使いやすそうなtable</a>
+              </dd>
+              <dt class="num"></dt>
+              <dd class="toc__unit numbaring__unit">
+                <a href="#No5">CSSセレクタのおさらい</a>
+              </dd>
+            </dl>
+          </div>
+        </div>
+      </section>
+    </article>
+      <!-- / 目次 -->
+
+    <!--***** web font *****-->
+    <article class="container">
+      <section class="wrapper">
+        <div class="origin">
+          <div class="contents contents--full js__padding">
+
+            <div class="title">
+              <h4 id="No1" class="mTitle">Web Fonts（Google Fonts）の利用方法</h4>
+              <div class="sankaku"></div>
+            </div>
+
+            <div class="contSection t">
+              <div class="col">
+                <h5 class="mTitle--leftBorder">Google Fonts にアクセス</h5>
+                <p class="sansyou mb30">
+                  <a href="https://fonts.google.com/">https://fonts.google.com/</a>
+                </p>
+              </div>
+              <div class="col colImg">
+                <img src="http://hiroken.heteml.jp/kakunin/tsukada/guide/img/sansyou/google_fonts_01.jpg" alt="google fontsサイト"/>
+              </div>
+            </div>
+
+            <div class="contSection t">
+              <div class="col">
+                <h5 class="mTitle--leftBorder">利用したいfontの+アイコンをクリック</h5>
+                <p class="desc">
+                  <i class="fa fa-lightbulb-o" aria-hidden="true"></i>
+                  フォントの太さやサイズ等が用意されているものは、それぞれ必要に応じて選択してから+アイコンを押すと、選択したフォントサイズ・太さのを利用できます。
+                </p>
+              </div>
+              <div class="col colImg">
+                <img src="http://hiroken.heteml.jp/kakunin/tsukada/guide/img/sansyou/google_fonts_02.jpg" alt="+アイコンをクリックする"/>
+              </div>
+            </div>
+
+            <div class="contSection t">
+              <div class="col">
+                <h5 class="mTitle--leftBorder">ブラウザ下に表示されたポップをクリック</h5>
+              </div>
+              <div class="col colImg">
+                <img src="http://hiroken.heteml.jp/kakunin/tsukada/guide/img/sansyou/google_fonts_03.jpg" alt="ブラウザ下に出た帯の-アイコンをクリックする"/>
+              </div>
+            </div>
+
+            <div class="contSection t">
+              <div class="col">
+                <h5 class="mTitle--leftBorder">表示されたHTML/CSSタグを貼り付ければ使えます！</h5>
+                <p class="desc">
+                  <i class="fa fa-lightbulb-o" aria-hidden="true"></i>
+                  オレンジ枠のhtmlにWeb Fontのlinkタグを利用したいファイルに貼り、CSSに黄枠font-familyを追加するとweb fontが使用できます。
+                  <br>他には@import形式でCSSに読み込ませられます。また、この画面でカスタマイズが行えます。（サポート言語の選択、font weight）
+                </p>
+              </div>
+              <div class="col colImg">
+                <img src="http://hiroken.heteml.jp/kakunin/tsukada/guide/img/sansyou/google_fonts_04.jpg" alt="タグをそれぞれ追加すると使えます！"/>
+              </div>
+            </div>
+
+            <div class="contSection">
+              <p class="sansyou">
+                <a href="#No5">「CSSセレクタのおさらい」</a>にてサンプルソースにGoogle Fontsを利用しています。
+              </p>
+            </div>
+          </div>
+				</div>
+      </section>
+    </article>
+    <!--***** / web font *****-->
+
+
+    <!--***** 要素を上下・左右・中央に寄せる *****-->
+    <article class="container">
+      <section class="wrapper">
+        <div class="t origin">
+          <div class="col contents contents--full js__padding">
+
+            <div class="title">
+              <h4 id="no1" class="mTitle">【HTML/CSS】要素を上下・左右・中央に寄せる</h4>
+              <div class="sankaku"></div>
+            </div>
+
+            <!-- section -->
+            <div class="contSection">
+              <h5 class="mtL mTitle--leftBorder">【CSS】text-alignで要素の中を左右中央に寄せにする</h5>
+
+              <div class="pointBox">
+                <div class="demoCont demo1">
+                  <div class="section section1">
+                    <div class="leftBox">
+                      <p>LEFT</p>
+                    </div>
+                  </div>
+
+                  <div class="section section2">
+                    <div class="centerBox">
+                      <p>CENTER</p>
+                    </div>
+                  </div>
+
+                  <div class="section section3">
+                    <div class="rightBox">
+                      <p>RIGHT</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <p class="desc">
+                <i class="fa fa-lightbulb-o" aria-hidden="true"></i>
+                インラインレベルの要素を左右中央どちらかに寄せる時便利。
+              </p>
+            </div>
+            <!-- / section -->
+
+            <!-- section -->
+            <div class="contSection">
+              <h5 class="mTitle--leftBorder">【CSS】margin:autoで要素を左右中央に寄せにする</h5>
+
+              <div class="pointBox">
+                <div class="demoCont demo2">
+                  <div class="section section1">
+                    <div class="leftBox">
+                      <p>LEFT</p>
+                    </div>
+                  </div>
+
+                  <div class="section section2">
+                    <div class="centerBox">
+                      <p>CENTER</p>
+                    </div>
+                  </div>
+
+                  <div class="section section3">
+                    <div class="rightBox">
+                      <p>RIGHT</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <p class="desc">
+                <i class="fa fa-lightbulb-o" aria-hidden="true"></i>
+                margin:autoは親要素のwidthが指定されていると効きます。
+              </p>
+            </div>
+            <!-- / section -->
+
+            <!-- section -->
+            <div class="contSection">
+              <h5 class="mTitle--leftBorder">【CSS】floatで要素を左右に寄せる</h5>
+
+              <div class="pointBox">
+                <div class="demoCont demo2">
+                  <div class="section section1 clearfix">
+                    <div class="leftBox">
+                      <p>LEFT</p>
+                    </div>
+                  </div>
+
+                  <div class="section section3 clearfix">
+                    <div class="rightBox">
+                      <p>RIGHT</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <p class="desc">
+                <i class="fa fa-lightbulb-o" aria-hidden="true"></i>
+                floatを指定すると要素が浮くため、clearfixを親要素に指定しfloatを解除します。
+              </p>
+            </div>
+            <!-- / section -->
+
+            <!-- section -->
+            <div class="contSection">
+              <h5 class="mTitle--leftBorder">【CSS】position:absoluteで要素を上下左右中央に寄せる</h5>
+
+              <div class="pointBox">
+                <div class="demoCont demo3">
+                  <div class="section">
+                    <div class="centerBox">
+                      <p>CENTER</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <p class="desc">
+                <i class="fa fa-lightbulb-o" aria-hidden="true"></i>
+                absoluteを指定すると要素が浮き高さがなくなるため、親要素にheightを指定します。
+                <br><br><span class="markerPen">補足：</span>
+                <br>上記のように緑ボックスを浮かせた場合、中のテキストは緑ボックスと同じ高さ分line-heightを指定すると中央寄せのようになります。
+                <br>ただし改行すると行間がその分広くなるので1行で収まる内容の場合に限られます。
+              </p>
+            </div>
+            <!-- / section -->
+
+            <!-- section -->
+            <div class="contSection">
+              <h5 class="mTitle--leftBorder">【CSS】display:table-cellで横並びにする</h5>
+
+              <div class="pointBox">
+                <div class="demoCont demo4">
+                  <div class="section">
+                    <div class="leftBox">
+                      <p>LEFT</p>
+                    </div>
+
+                    <div class="centerBox">
+                      <p>CENTER</p>
+                    </div>
+
+                    <div class="rightBox">
+                      <p>RIGHT</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <p class="desc">
+                <i class="fa fa-lightbulb-o" aria-hidden="true"></i>
+                子要素を上下中央に寄せたい時に便利です。
+                <br>スマホ用に使用する時は親要素にtable-layoutを指定しないと子要素がはみ出ます。
+                <br>MacのSafariはその他ブラウザと若干見え方が変わるので注意です。
+              </p>
+            </div>
+            <!-- / section -->
+
+            <!-- section -->
+            <div class="contSection">
+              <h5 class="mTitle--leftBorder">【CSS】display:flexで横並びにする</h5>
+
+              <div class="pointBox mb30">
+                <h6 class="h6">最初と最後は端に寄せ、間のコンテンツは等間隔</h6>
+                <div class="demoCont demo5">
+                  <div class="section section1">
+                    <div class="leftBox">
+                      <p>LEFT</p>
+                    </div>
+
+                    <div class="centerBox">
+                      <p>CENTER</p>
+                    </div>
+
+                    <div class="rightBox">
+                      <p>RIGHT</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="pointBox mb30">
+                <h6 class="h6">左寄せ</h6>
+                <div class="demoCont demo5">
+                  <div class="section section2">
+                    <div class="leftBox">
+                      <p>LEFT</p>
+                    </div>
+
+                    <div class="centerBox">
+                      <p>CENTER</p>
+                    </div>
+
+                    <div class="rightBox">
+                      <p>RIGHT</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="pointBox mb30">
+                <h6 class="h6">中央寄せ</h6>
+                <div class="demoCont demo5">
+                  <div class="section section3">
+                    <div class="leftBox">
+                      <p>LEFT</p>
+                    </div>
+
+                    <div class="centerBox">
+                      <p>CENTER</p>
+                    </div>
+
+                    <div class="rightBox">
+                      <p>RIGHT</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <p class="desc">
+                <i class="fa fa-lightbulb-o" aria-hidden="true"></i>
+                主要な最新ブラウザは対応しています。
+                <br>上下中央寄せ、左右寄せどちらもシンプルな記述で実装できます。
+                <br>
+                <br>2017年10月現在ではsafariのみflexを指定した子要素の高さがなくなるバグが直っていないので、
+                <br>align-itemnsをstrechにするなりで対応するしかなさそうです。
+              </p>
+            </div>
+            <!-- / section -->
+
+            <!-- <p class="toTop"><a href="#toc">目次へ戻る</a></p> -->
+          </div>
+        </div>
+      </section>
+    </article>
+      <!--***** / 要素を上下・左右・中央に寄せる *****-->
+
+      <!--***** レイアウトコーディング *****-->
+    <article class="container">
+      <section class="wrapper">
+        <div class="t origin">
+          <div class="col contents contents--full js__padding">
+
+            <div class="title">
+              <h4 id="No2" class="mTitle">【HTML/CSS】HTML5でレイアウトコーディング</h4>
+              <div class="sankaku"></div>
+            </div>
+
+            <!-- section -->
+            <div class="contSection mtL" id="column1">
+              <h5 class="mTitle--leftBorder">１カラムレイアウト</h5>
+
+              <div class="pointBox">
+              	<div class="demoCont">
+                  <header class="dHeader">
+                    <p>Header</p>
+                  </header>
+
+                  <main class="dMain dMain--1column">
+                    <p>Main</p>
+                  </main>
+
+                  <div class="dSide dSide--1column">
+                    <p>Side</p>
+                  </div>
+
+                  <footer class="dFooter dFooter--1column">
+                    <p>Footer</p>
+                  </footer>
+              	</div>
+              </div>
+
+              <p class="desc">
+                <i class="fa fa-lightbulb-o" aria-hidden="true"></i>
+                レスポンシブ対応です。
+              </p>
+            </div>
+            <!-- / section -->
+
+            <!-- section -->
+            <div class="contSection">
+              <!-- 2column - float -->
+              <h5 class="mTitle--leftBorder">2カラムレイアウト（float使用）</h5>
+
+              <div class="pointBox">
+                <div class="demoCont">
+                  <header class="dHeader">
+                    <p>Header</p>
+                  </header>
+
+                  <div class="columnWrap1 clearfix">
+                    <main class="dMain dMain--2column">
+                      <p>Main</p>
+                    </main>
+
+                    <div class="dSide dSide--2column">
+                      <p>Side</p>
+                    </div>
+                  </div>
+
+                  <footer class="dFooter">
+                    <p>Footer</p>
+                  </footer>
+                </div>
+              </div>
+
+              <p class="desc">
+                <i class="fa fa-lightbulb-o" aria-hidden="true"></i>
+                MainとSideをwrapし、それぞれのコンテンツをfloatで横並びにしています。
+              </p>
+            </div>
+              <!-- / 2column - float -->
+
+              <!-- 2column - table-cell -->
+            <div class="contSection">
+              <h5 class="mTitle--leftBorder">2カラムレイアウト（display:table-cell使用）</h5>
+
+              <div class="pointBox">
+                <div class="demoCont">
+                  <header class="dHeader">
+                    <p>Header</p>
+                  </header>
+
+                  <div class="columnWrap1 columnWrap--tb clearfix">
+                    <main class="dMain dMain--tc">
+                      <p>Main</p>
+                    </main>
+
+                    <div class="dSide dSide--tc">
+                      <p>Side</p>
+                    </div>
+                  </div>
+
+                  <footer class="dFooter">
+                    <p>Footer</p>
+                  </footer>
+                </div>
+              </div>
+
+              <p class="desc">
+                <i class="fa fa-lightbulb-o" aria-hidden="true"></i>
+                mainとsideをtable-cellにしました。
+                <br>親要素に"table-layout:fixed"を指定し忘れずに。
+              </p>
+            </div>
+              <!-- / 2column - table-cell -->
+
+              <!-- 2column - inline-block -->
+            <div class="contSection">
+              <h5 class="mTitle--leftBorder">2カラムレイアウト（display:inline-block使用）</h5>
+
+              <div class="pointBox">
+                <div class="demoCont">
+                  <header class="dHeader">
+                    <p>Header</p>
+                  </header>
+
+                  <div class="columnWrap1 columnWrap--ib clearfix">
+                    <main class="dMain dMain--ib">
+                      <p>Main</p>
+                    </main>
+
+                    <div class="dSide dSide--ib">
+                      <p>Side</p>
+                    </div>
+                  </div>
+
+                  <footer class="dFooter">
+                    <p>Footer</p>
+                  </footer>
+                </div>
+              </div>
+
+              <p class="desc">
+                <i class="fa fa-lightbulb-o" aria-hidden="true"></i>
+                display:inline-blockはvertical-alignとmarginが効きます。
+                <br>高さの違う要素を横並びにできるので使い勝手良いです。
+                <br>ただしinline-blockをかけた要素に余白ができてしまうので、調節する必要があります。
+                <br>macのSafari用はfont-size:1px以上ではないと効かないので別途記述を追加します。
+              </p>
+            </div>
+            <!-- / 2column - inline-block -->
+
+            <!-- 3column - float -->
+            <div class="contSection">
+              <h5 class="mTitle--leftBorder">3カラムレイアウト(float使用)</h5>
+
+              <div class="pointBox">
+                <div class="demoCont">
+                  <header class="dHeader">
+                    <p>Header</p>
+                  </header>
+
+                  <div class="columnWrap1 clearfix">
+                    <div class="columnWrap2 clearfix">
+                      <main class="dMain dMain--3column">
+                        <p>Main</p>
+                      </main>
+
+                      <div class="dSide dSide1--3column">
+                        <p>Side1</p>
+                      </div>
+                    </div>
+
+                    <div class="dSide dSide2--3column">
+                        <p>Side2</p>
+                    </div>
+                  </div>
+
+                  <footer class="dFooter">
+                    <p>Footer</p>
+                  </footer>
+                </div>
+              </div>
+
+              <p class="desc">
+                <i class="fa fa-lightbulb-o" aria-hidden="true"></i>
+                白枠で囲ったMainとSide1をfloatし、更に白枠とSide2にfloatをかけています。
+              </p>
+            </div>
+            <!-- / 3column - float -->
+
+            <!-- 3column - column -->
+            <div class="contSection">
+              <h5 class="mTitle--leftBorder">3カラムレイアウト（column使用）</h5>
+
+              <div class="pointBox">
+                <div class="demoCont">
+                  <header class="dHeader">
+                    <p>Header</p>
+                  </header>
+
+                  <div class= "columnWrap--colmn">
+                    <main class="dMain dMain--3column--col">
+                      <p>Main Main Main Main Main Main Main Main Main Main Main Main Main Main Main Main</p>
+                    </main>
+
+                    <div class="dSide dSide1--3column--col">
+                      <p>Side1 Side1 Side1 Side1 Side1 Side1</p>
+                    </div>
+
+                    <div class="dSide dSide2--3column--col">
+                        <p>Side2 Side2 Side2 Side2 Side2 Side2 Side2</p>
+                    </div>
+                  </div>
+
+                  <footer class="dFooter">
+                    <p>Footer</p>
+                  </footer>
+                </div>
+              </div>
+
+              <p class="desc">
+                <i class="fa fa-lightbulb-o" aria-hidden="true"></i>
+                使用可能環境：IE11~, Chrome49~, iOS Safari10.2~, Android 4.4~, Android(Chrome)61~
+                <br>新聞のような文章の段が予め決まっているレイアウトを構築する際に便利だと思います。
+                <br>columnsを指定した要素にheightが指定されていると、heightの方が優先されます。
+              </p>
+            </div>
+            <!-- / 3column - column -->
+
+            <!-- <p class="toTop"><a href="#toc">目次へ戻る</a></p> -->
+          </div>
+        </div>
+      </section>
+    </article>
+      <!--***** / レイアウトコーディング *****-->
+
+
+      <!--***** CSSで作るタイトルデザイン *****-->
+    <article class="container">
+      <section class="wrapper">
+        <div class="t origin">
+          <div class="col contents contents--full js__padding">
+
+            <div class="title">
+              <h4 id="No3" class="mTitle">【HTML/CSS】CSSで作るタイトルデザイン</h4>
+              <div class="sankaku"></div>
+            </div>
+
+            <!-- section -->
+            <div class="contSection">
+              <h5 class="mTitle--leftBorder">下ライン</h5>
+
+              <p class="fix">
+                <i class="fa fa-align-left fz18 va-m" aria-hidden="true"></i>
+                複数行対応
+              </p>
+
+              <h6 class="ttl1--bd ttl__default mb30">
+                Title title タイトル 見出し
+              </h6>
+
+              <h6 class="ttl1--dt ttl__default mb30">
+                Title title タイトル 見出し
+              </h6>
+
+              <h6 class="ttl1--bd--2color ttl__default mb30">
+                Title title タイトル 見出し
+              </h6>
+
+              <h6 class="ttl1--bd--2color--2 ttl__default mb30">
+                Title title タイトル 見出し
+              </h6>
+
+              <div class="pointBox">
+                <h6 class="ttl1--bd--shadow ttl__default">
+                  Title title タイトル 見出し
+                </h6>
+              </div>
+
+              <p class="point mb30">
+                <i class="fa fa-lightbulb-o" aria-hidden="true"></i>
+                背景色が濃い目の箇所で使うと凹んで見えます。
+              </p>
+
+              <p class="fix">
+                <i class="fa fa-align-left fz18 va-m" aria-hidden="true"></i>
+                1行のみ対応
+              </p>
+
+              <h6 class="ttl1--markerPen ttl__default mb30">
+                Title title タイトル 見出し
+              </h6>
+            </div>
+            <!-- / section -->
+
+            <!-- section -->
+            <div class="contSection">
+              <h5 class="mTitle--leftBorder">上下ライン</h5>
+
+              <p class="fix">
+                <i class="fa fa-align-left fz18 va-m" aria-hidden="true"></i>
+                複数行対応
+              </p>
+
+              <h6 class="ttl2 ttl__default mb30">
+                Title title タイトル 見出し
+              </h6>
+
+              <h6 class="ttl2--dsh ttl__default">
+                Title title タイトル 見出し
+              </h6>
+            </div>
+            <!-- / section -->
+
+            <!-- section -->
+            <div class="contSection">
+              <h5 class="mTitle--leftBorder">左ボーダー</h5>
+
+              <p class="fix">
+                <i class="fa fa-align-left fz18 va-m" aria-hidden="true"></i>
+                複数行対応
+              </p>
+
+              <h6 class="ttl3 ttl__default mb30">
+                Title title タイトル 見出し
+              </h6>
+
+              <h6 class="ttl3--2color ttl__default mb30">
+                Title title タイトル 見出し
+              </h6>
+
+              <h6 class="ttl3--bd ttl__default mb30">
+                Title title タイトル 見出し（h6に直接border-bottom指定）
+              </h6>
+
+              <h6 class="ttl3--bd2 ttl__default mb30">
+                Title title タイトル 見出し(擬似要素にborder-bottom指定)
+              </h6>
+
+              <p class="point">
+                <i class="fa fa-lightbulb-o" aria-hidden="true"></i>
+                2種類の色を使う時は疑似要素にborder-bottomを指定するときれいに見えます。
+              </p>
+            </div>
+            <!-- / section -->
+
+            <!-- section -->
+            <div class="contSection">
+              <h5 class="mTitle--leftBorder">囲みボーダー</h5>
+
+              <p class="fix">
+                <i class="fa fa-align-left fz18 va-m" aria-hidden="true"></i>
+                複数行対応
+              </p>
+
+              <h6 class="ttl4 ttl__default mb30">
+                Title title タイトル 見出し
+              </h6>
+
+              <h6 class="ttl4--round ttl__default mb30">
+                Title title タイトル 見出し
+              </h6>
+
+              <h6 class="ttl4--handWriting ttl__default">
+                Title title タイトル 見出し
+              </h6>
+            </div>
+            <!-- / section -->
+
+            <!-- section -->
+            <div class="contSection">
+              <h5 class="mTitle--leftBorder">囲みボーダー + アクセント</h5>
+
+              <p class="fix">
+                <i class="fa fa-align-left fz18 va-m" aria-hidden="true"></i>
+                複数行対応
+              </p>
+
+              <h6 class="ttl5 ttl__default">
+                Title title タイトル 見出し
+              </h6>
+            </div>
+            <!-- / section -->
+
+            <!-- section -->
+            <div class="contSection">
+              <h5 class="mTitle--leftBorder">ストライプ（テキスト背景有り/無し）</h5>
+
+              <p class="fix">
+                <i class="fa fa-align-left va-m" aria-hidden="true"></i>
+                複数行対応
+              </p>
+
+              <h6 class="ttl6 ttl__default mb30">
+                <span>Title title タイトル 見出し</span>
+              </h6>
+
+              <h6 class="ttl6--full ttl__default mb30">
+                Title title タイトル 見出し
+              </h6>
+
+              <div class="pointBox">
+                <span class="markerPen">repeating-linear-gradientの構造</span>
+                <br>
+                <br><span class="fwb">repeating-linear-gradient(ストライプの角度, 色1 始点, 色1 終点, 色2 始点、色2 終点[, 色3 始点, 色3 終点, …])</span>
+                <br>
+                <br>最初ににストライプの角度を指定し、その後はストライプを作るボーダーの色とその始点と終点を続けて指定していきます。
+                <br>それぞれの色の始点と終点は、グラデーションの開始位置からの距離を指定します。
+                <br>色は何色でも指定できます。
+                <br>色の指定が終わった所で、再び最初に指定した色からボーダーが繰り返し表示されます。
+                <br><small class="quate">引用：<a href="https://mae.chab.in/archives/2348">https://mae.chab.in/archives/2348</a></small>
+              </div>
+            </div>
+            <!-- / section -->
+
+            <!-- section -->
+            <div class="contSection">
+              <h5 class="mTitle--leftBorder">背景色有り</h5>
+
+              <p class="fix">
+                <i class="fa fa-align-left va-m" aria-hidden="true"></i>
+                複数行対応
+              </p>
+
+              <h6 class="ttl7 ttl__default mb30">
+                Title title タイトル 見出し
+              </h6>
+
+              <h6 class="ttl7--round ttl__default mb30">
+                Title title タイトル 見出し
+              </h6>
+
+              <h6 class="ttl7--bdl ttl__default mb30">
+                Title title タイトル 見出し
+              </h6>
+
+              <h6 class="ttl7--bdb ttl__default mb30">
+                Title title タイトル 見出し
+              </h6>
+
+              <h6 class="ttl7--bdtb ttl__default mb30">
+                Title title タイトル 見出し
+              </h6>
+
+              <h6 class="ttl7--bddouble ttl__default mb30">
+                Title title タイトル 見出し
+              </h6>
+
+              <h6 class="ttl7--dot ttl__default mb30">
+                Title title タイトル 見出し
+              </h6>
+
+              <h6 class="ttl7--dotbd ttl__default mb30">
+                Title title タイトル 見出し
+              </h6>
+
+              <h6 class="ttl7--gradation ttl__default mb30">
+                Title title タイトル 見出し
+              </h6>
+
+              <h6 class="ttl7--gradation--bd ttl__default mb30">
+                Title title タイトル 見出し
+              </h6>
+            </div>
+            <!-- / section -->
+
+            <!-- section -->
+            <div class="contSection">
+              <h5 class="mTitle--leftBorder">テキストの中央にボーダー</h5>
+
+              <p class="fix">
+                <i class="fa fa-align-left fz18 va-m" aria-hidden="true"></i>
+                複数行対応
+              </p>
+
+              <h6 class="ttl8 ttl__default">
+                <span>Title title タイトル 見出し</span>
+              </h6>
+
+              <h6 class="ttl8--gradation ttl__default">
+                <span>Title title タイトル 見出し</span>
+              </h6>
+
+              <p class="desc">
+                <i class="fa fa-lightbulb-o" aria-hidden="true"></i>
+                1行だとすっきりして見えるので、1行で収まる見出しに使用するのがおすすめです。
+                <br>背景色未指定なのでコンテンツの背景に左右されません。
+                <br><br><span class="markerPen">補足：</span>
+                <br>linear-gradientをtransparentで指定するとiOSのSafariでは透明な黒に変換されます。
+                <br>変換されたくない場合はrgba()形式で、グラデーションするカラーと同じカラーを指定しましょう。
+              </p>
+            </div>
+            <!-- / section -->
+
+            <!-- section -->
+            <div class="contSection">
+              <h5 class="mTitle--leftBorder">吹き出し</h5>
+
+              <p class="fix">
+                <i class="fa fa-align-left fz18 va-m" aria-hidden="true"></i>
+                複数行対応
+              </p>
+
+              <h6 class="ttl9 ttl9--leftBottom ttl__default mb30">
+                <span>Title title タイトル 見出し</span>
+              </h6>
+
+              <h6 class="ttl9 ttl9--rightBottom ttl__default mb30">
+                <span>Title title タイトル 見出し</span>
+              </h6>
+
+              <h6 class="ttl9 ttl9--right ttl__default mb30">
+                <span>Title title タイトル 見出し</span>
+              </h6>
+
+              <h6 class="ttl9 ttl9--left ttl__default mb30">
+                <span>Title title タイトル 見出し</span>
+              </h6>
+
+              <!-- 吹き出し使用例 -->
+              <div class="t testBox mb30">
+              	<div class="testimg"><img src="img/r1-flip-sp.png" alt=""></div>
+
+              	<div class="testBox__element">
+  	              <h6 class="ttl9 ttl9--left ttl__default">
+  	                <span>こんにちは～
+                      <br>複数行になるとどういう見え方になるのか、チェックするためにボクはいるよ～
+                      <br>このように文章が長くなっても中央から上下に伸びていくようにできているよ～
+                    </span>
+  	              </h6>
+	              </div>
+              </div>
+
+              <h5 class="mTitle--leftBorder">吹き出し(内側にshadow)</h5>
+              <h6 class="ttl9 ttl9--shadow ttl__default mb30">
+                <span>Title title タイトル 見出し</span>
+              </h6>
+
+              <h5 class="mTitle--leftBorder">吹き出し（白背景）</h5>
+              <h6 class="ttl9 ttl9--bgWhite ttl__default mb30">
+                <span>Title title タイトル 見出し</span>
+              </h6>
+
+              <p class="desc">
+                <i class="fa fa-lightbulb-o" aria-hidden="true"></i>
+                1行だとすっきりして見えるので、1行で収まる見出しに使用するのがおすすめです。
+                <br>背景色未指定なのでコンテンツの背景に左右されません。
+                <br><br><span class="markerPen">補足：</span>
+                <br>linear-gradientをtransparentで指定するとiOSのSafariでは透明な黒に変換されます。
+                <br>変換されたくない場合はrgba()形式で、グラデーションするカラーと同じカラーを指定しましょう。
+              </p>
+            </div>
+            <!-- / section -->
+
+            <!-- section -->
+            <div class="contSection">
+              <h5 class="mTitle--leftBorder">ボックス</h5>
+
+              <p class="fix">
+                <i class="fa fa-align-left va-m" aria-hidden="true"></i>
+                複数行対応
+              </p>
+
+              <h6 class="ttl10--1 ttl__default mb30">
+                Title title タイトル 見出し
+              </h6>
+
+              <h6 class="ttl10--2 ttl__default mb30">
+                Title title タイトル 見出し
+              </h6>
+            </div>
+            <!-- / section -->
+
+            <!-- section -->
+            <div class="contSection">
+              <h5 class="mTitle--leftBorder">リボン</h5>
+
+              <p class="fix">
+                <i class="fa fa-align-left va-m" aria-hidden="true"></i>
+                複数行対応
+              </p>
+
+              <h6 class="ttl11--1 ttl__default mb30">
+                Title title タイトル 見出し
+              </h6>
+
+              <h6 class="ttl11--2 ttl__default mb30">
+                Title title タイトル 見出し
+              </h6>
+
+              <h6 class="ttl11--3 ttl__default mb30">
+                <span>Title title タイトル 見出し</span>
+              </h6>
+
+              <h6 class="ttl11--4 ttl__default mb30">
+                <span>Title title タイトル 見出し</span>
+              </h6>
+            </div>
+            <!-- / section -->
+
+            <!-- section -->
+            <div class="contSection">
+              <h5 class="mTitle--leftBorder">ドッグイヤー</h5>
+
+              <p class="fix">
+                <i class="fa fa-align-left va-m" aria-hidden="true"></i>
+                複数行対応
+              </p>
+
+              <h6 class="ttl12--1 ttl__default mb30">
+                Title title タイトル 見出し
+              </h6>
+
+              <h6 class="ttl12--2 ttl__default mb30">
+                Title title タイトル 見出し
+              </h6>
+
+              <p class="desc">
+                <i class="fa fa-lightbulb-o" aria-hidden="true"></i>
+                上から2個目のドッグイヤーは他にも2種類公開されています。
+                <br>公開ページ（Code Pen）：<a href="https://codepen.io/leaverou/pen/raGaNR">https://codepen.io/leaverou/pen/raGaNR</a>
+              </p>
+            </div>
+            <!-- / section -->
+
+            <!-- section -->
+            <div class="contSection">
+              <h5 class="mTitle--leftBorder">ページカール</h5>
+
+              <p class="fix">
+                <i class="fa fa-align-left va-m" aria-hidden="true"></i>
+                複数行対応
+              </p>
+
+              <div class="ttl13__box">
+                <h6 class="ttl13 ttl__default mb30">
+                  Title title タイトル 見出し
+                </h6>
+              </div>
+
+              <p class="desc">
+                <i class="fa fa-lightbulb-o" aria-hidden="true"></i>
+                「<a href="https://www.nxworld.net/tips/50-css-heading-styling.html#anchor36">紹介ページ</a>」には、&lt;h&gt;タグ自体に擬似要素でbox-shadowを指定していますが、
+                <br>上手く重ねられない場合は上記ソースコードのように&lt;h&gt;をラップした要素に指定してみてください。
+                <br>疑似要素片方にだけ指定すると片側のみshadowがかかります。
+              </p>
+            </div>
+            <!-- / section -->
+
+            <!-- section -->
+            <div class="contSection">
+              <h5 class="mTitle--leftBorder">ボックスシャドウ</h5>
+
+              <p class="fix">
+                <i class="fa fa-align-left va-m" aria-hidden="true"></i>
+                複数行対応
+              </p>
+
+              <h6 class="ttl14--1 ttl__default mb30">
+                Title title タイトル 見出し
+              </h6>
+
+              <h6 class="ttl14--2 ttl__default mb30">
+                Title title タイトル 見出し
+              </h6>
+
+              <h6 class="ttl14--3 ttl__default mb30">
+                Title title タイトル 見出し
+              </h6>
+            </div>
+            <!-- / section -->
+
+            <!-- section -->
+            <div class="contSection">
+              <h5 class="mTitle--leftBorder">紙を切り取ったようなデザイン</h5>
+
+              <p class="fix">
+                <i class="fa fa-align-left va-m" aria-hidden="true"></i>
+                複数行対応
+              </p>
+
+              <h6 class="ttl15 ttl__default mb30">
+                Title title タイトル 見出し
+              </h6>
+            </div>
+            <!-- / section -->
+
+            <!-- section -->
+            <div class="contSection">
+              <h5 class="mTitle--leftBorder">自動ナンバリングタイトル</h5>
+
+              <p class="fix">
+                <i class="fa fa-align-left va-m" aria-hidden="true"></i>
+                複数行対応
+              </p>
+
+              <div class="countArea">
+                <h6 class="ttl16 ttl__default mb30">
+                  Title title タイトル 見出し
+                </h6>
+
+                <h6 class="ttl16 ttl__default mb30">
+                  Title title タイトル 見出し
+                </h6>
+              </div>
+            </div>
+            <!-- / section -->
+
+            <!-- section -->
+            <div class="contSection">
+              <h5 class="mTitle--leftBorder">マーク</h5>
+
+              <p class="fix">
+                <i class="fa fa-align-left va-m" aria-hidden="true"></i>
+                複数行対応
+              </p>
+
+              <h6 class="ttl17--1 ttl__default mb30">
+                Title title タイトル 見出し
+              </h6>
+
+              <h6 class="ttl17--2 ttl__default mb30">
+                Title title タイトル 見出し
+              </h6>
+            </div>
+            <!-- / section -->
+
+            <!-- <p class="toTop"><a href="#toc">目次へ戻る</a></p> -->
+          </div>
+        </div>
+      </section>
+    </article>
+      <!--*****/ CSSで作るタイトルデザイン *****-->
+
+      <!--***** table *****-->
+    <article class="container">
+      <section class="wrapper">
+        <div class="t origin">
+          <div class="col contents contents--full js__padding">
+
+            <div class="title">
+              <h4 id="No4" class="mTitle">【HTML/CSS】使いやすそうなtable</h4>
+              <div class="sankaku"></div>
+            </div>
+
+            <!-- section -->
+            <div class="contSection">
+              <h5 class="mTitle--leftBorder">フラットデザイン向け三角矢印つきtable</h5>
+
+              <table class="table1">
+                <tbody>
+                    <tr>
+                      <th class="arrow_box">会社名</th>
+                      <td>株式会社HIROKEN</td>
+                    </tr>
+                    <tr>
+                      <th class="arrow_box">所在地</th>
+                      <td>
+                          〒153-0043<br>
+                          東京都目黒区東山1-4-4 目黒東山ビル8階
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>TEL</th>
+                      <td>
+                          03-6451-2397
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>FAX</th>
+                      <td>
+                          03-6451-2497
+                      </td>
+                    </tr>
+                </tbody>
+              </table>
+            </div>
+
+
+						<div class="contSection">
+							<h5 class="mTitle--leftBorder">タイル調table</h5>
+
+							<table class="table2">
+								<tbody>
+									<tr>
+										<th class="r1">ブラウザ名</th>
+										<th class="r2">FireFox</th>
+										<th class="r3">Google Chrome</th>
+                    <th class="r4">Internet Explorer</th>
+
+									</tr>
+									<tr>
+										<th class="r1">CSSハック</th>
+										<td class="r2">@-moz-document url-prefix() {<br>　セレクタ{&nbsp;}<br>}</td>
+										<td class="r3">@media screen and (-webkit-min-device-pixel-ratio:0) {<br>　セレクタ{&nbsp;}<br>}</td>
+										<td class="r4">バージョンにより異なります</td>
+									</tr>
+									<tr>
+										<th class="r1">こんな時に困る</th>
+										<td class="r2">
+												displayがtable系の場合、after擬似要素のdisplayをabsoluteにできない。
+										</td>
+										<td class="r3">
+												印刷するときに1pxずれることがある
+										</td>
+										<td class="r4">
+												筆舌に尽くしがたい
+										</td>
+									</tr>
+									<tr>
+										<th class="r1">その他特筆事項</th>
+										<td class="r2">特に無し</td>
+										<td class="r3">SSL証明書の期限切れがデフォルトで分からない</td>
+										<td class="r4">2014年5月1日現在、脆弱性のため使わない方が良い</td>
+									</tr>
+									</tbody>
+								</table>
+								</div>
+
+
+                <!-- section -->
+								<!--
+                <div class="contSection">
+                  <h5 class="mTitle--leftBorder">タイル調table</h5>
+
+                  <table class="table2">
+                    <tbody>
+                        <tr>
+                          <th class="r1">ブラウザ名</th>
+                          <th class="r2">FireFox</th>
+                          <th class="r3">Google Chrome</th>
+                          <th class="r4">Internet Explorer</th>
+                        </tr>
+                        <tr>
+                          <th class="r1">CSSハック</th>
+                          <td class="r2">@-moz-document url-prefix() {<br>　セレクタ{&nbsp;}<br>}</td>
+                          <td class="r3">@media screen and (-webkit-min-device-pixel-ratio:0) {<br>　セレクタ{&nbsp;}<br>}</td>
+                          <td class="r4">バージョンにより異なります</td>
+                        </tr>
+                        <tr>
+                          <th class="r1">こんな時に困る</th>
+                          <td class="r2">
+                              displayがtable系の場合、after擬似要素のdisplayをabsoluteにできない。
+                          </td>
+                          <td class="r3">
+                              印刷するときに1pxずれることがある
+                          </td>
+                          <td class="r4">
+                              筆舌に尽くしがたい
+                          </td>
+                        </tr>
+                        <tr>
+                          <th class="r1">その他特筆事項</th>
+                          <td class="r2">特に無し</td>
+                          <td class="r3">SSL証明書の期限切れがデフォルトで分からない</td>
+                          <td class="r4">2014年5月1日現在、脆弱性のため使わない方が良い</td>
+                        </tr>
+                    </tbody>
+                </table>
+              </div>
+						-->
+
+              <!-- section -->
+              <div class="contSection">
+                <h5 class="mTitle--leftBorder">ノートっぽいtable</h5>
+
+                <table class="table3">
+                  <tbody>
+                      <tr>
+                        <th>FireFox</th>
+                        <td class="data fst">
+                            タブ型
+                        </td>
+                        <td class="data">
+                            Geckoエンジン
+                        </td>
+                        <td class="data">
+                            Linux対応
+                        </td>
+                        <td class="data">
+                            89言語対応
+                        </td>
+                        <td class="data">
+                            Mozilla
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="bar" colspan="6"></td>
+                      </tr>
+                      <tr>
+                        <th>Chrome</th>
+                        <td class="data fst">
+                            タブ型
+                        </td>
+                        <td class="data">
+                            Blinkエンジン
+                        </td>
+                        <td class="data">
+                            Linux対応
+                        </td>
+                        <td class="data">
+                            53言語対応
+                        </td>
+                        <td class="data">
+                            Google
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="bar" colspan="6"></td>
+                      </tr>
+                      <tr>
+                        <th>IE</th>
+                        <td class="data fst">
+                            7以降タブ型
+                        </td>
+                        <td class="data">
+                            Tridentエンジン
+                        </td>
+                        <td class="data">
+                            Linux一部対応
+                        </td>
+                        <td class="data">
+                            95言語対応
+                        </td>
+                        <td class="data">
+                            Microsoft
+                        </td>
+                      </tr>
+                  </tbody>
+              </table>
+            </div>
+
+            <div class="contSection">
+              <h5 class="mTitle--leftBorder">サービスサイトの料金比較表っぽいtable</h5>
+
+              <table class="table4">
+                <thead>
+                  <tr>
+                    <th class="c1">Business<br></th>
+                    <th class="c2">Team<br></th>
+                    <th class="c3">Free<br></th>
+                  </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                      <td class="c1">
+                          1,000円
+                      </td>
+                      <td class="c2">
+                          500円
+                      </td>
+                      <td class="c3">
+                          無料
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="c1">
+                          20GB
+                      </td>
+                      <td class="c2">
+                          10GB
+                      </td>
+                      <td class="c3">
+                          2GB
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="c1">
+                          独自SSL（無制限）
+                      </td>
+                      <td class="c2">
+                          独自SSL（3個）
+                      </td>
+                      <td class="c3">
+                          なし
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="c1"><button>お申込</button></td>
+                      <td class="c2"><button>お申込</button></td>
+                      <td class="c3"><button>お申込</button></td>
+                    </tr>
+                </tbody>
+              </table>
+            </div>
+            <!-- / section -->
+
+            <!--<p class="toTop"><a href="#toc">目次へ戻る</a></p>-->
+          </div>
+        </div>
+      </section>
+    </article>
+      <!--***** / table *****-->
+
+
+    <!--***** CSSセレクタ 種類リスト *****-->
+    <article class="container">
+      <section class="wrapper">
+        <div class="t origin">
+          <div class="col contents contents--full js__padding">
+
+            <div class="title">
+              <h4 id="No5" class="mTitle">【HTML/CSS】CSSセレクタのおさらい - 一覧</h4>
+              <div class="sankaku"></div>
+            </div>
+
+            <h5 class="mTitle--leftBorder mtL">
+            	セレクタ
+            </h5>
+            <dl class="toc numbaring__list clearfix">
+              <dt class="num"></dt>
+              <dd class="toc__unit numbaring__unit">
+                <a href="#No6-1">* (ユニバーサルセレクタ)</a>
+              </dd>
+              <dt class="num"></dt>
+              <dd class="toc__unit numbaring__unit">
+                <a href="#No6-2">. (classセレクタ)</a>
+              </dd>
+              <dt class="num"></dt>
+              <dd class="toc__unit numbaring__unit">
+                <a href="#No6-3"># (idセレクタ)</a>
+              </dd>
+              <dt class="num"></dt>
+              <dd class="toc__unit numbaring__unit">
+                <a href="#No6-4">親要素 子要素 (子孫要素に適用)</a>
+              </dd>
+              <dt class="num"></dt>
+              <dd class="toc__unit numbaring__unit">
+                <a href="#No6-4">親要素 &gt; 子要素 (親要素の直下の子要素適用)</a>
+              </dd>
+              <dt class="num"></dt>
+              <dd class="toc__unit numbaring__unit">
+                <a href="#No6-4">要素 + 要素 (隣接する要素に適用)</a>
+              </dd>
+              <dt class="num"></dt>
+              <dd class="toc__unit numbaring__unit">
+                <a href="#No6-4">要素 ~ 要素 （【CSS3】 後ろにある要素に適用）</a>
+              </dd>
+            </dl>
+
+
+            <h5 class="mTitle--leftBorder">属性セレクタ</h5>
+            <dl class="toc numbaring__list clearfix mtL">
+              <dt class="num"></dt>
+              <dd class="toc__unit numbaring__unit">
+                <a href="#No7">p[dog] (特定の属性を持つ要素に適用)</a>
+              </dd>
+              <dt class="num"></dt>
+              <dd class="toc__unit numbaring__unit">
+                <a href="#No7">p[dog="bow"] (特定の属性値を持つ要素に適用)</a>
+              </dd>
+              <dt class="num"></dt>
+              <dd class="toc__unit numbaring__unit">
+                <a href="#No7">p[dog^="bow"] (【CSS3】 属性の値が指定した文字で始まる要素にだけ適用)</a>
+              </dd>
+              <dt class="num"></dt>
+              <dd class="toc__unit numbaring__unit">
+                <a href="#No7">p[dog$="nyan"] (【CSS3】 属性の値が指定した文字で終わる場合に適用)</a>
+              </dd>
+              <dt class="num"></dt>
+              <dd class="toc__unit numbaring__unit">
+                <a href="#No7">p[dog*="bow"] (【CSS3】 属性の値に指定した文字が含まれる場合に適用)</a>
+              </dd>
+            </dl>
+
+
+            <h5 class="mTitle--leftBorder">
+              疑似要素
+            </h5>
+            <p>
+              <i class="fa fa-lightbulb-o" aria-hidden="true"></i>
+              <span class="fwb"><a href="code.html#No8">ソースコードはこちら</a></span>
+            </p>
+            <dl class="toc numbaring__list clearfix">
+              <dt class="num"></dt>
+              <dd class="toc__unit numbaring__unit">
+                :first-letter (最初に現れる文字にだけ適用)
+              </dd>
+              <dt class="num"></dt>
+              <dd class="toc__unit numbaring__unit">
+                :first-line (最初の行にだけ適用)
+              </dd>
+              <dt class="num"></dt>
+              <dd class="toc__unit numbaring__unit">
+                :first-child (最初に現れる要素にだけ適用)
+              </dd>
+              <dt class="num"></dt>
+              <dd class="toc__unit numbaring__unit">
+                :nth-child(n) (前からn番目の要素にだけ適用)
+              </dd>
+              <dt class="num"></dt>
+              <dd class="toc__unit numbaring__unit">
+                :nth-child(n+3) (前から3番目以降の要素に適用)
+              </dd>
+              <dt class="num"></dt>
+              <dd class="toc__unit numbaring__unit">
+                :nth-child(-n+3) (最初の3番目の要素だけに適用)
+              </dd>
+              <dt class="num"></dt>
+              <dd class="toc__unit numbaring__unit">
+                :nth-child(4n+1) (前から1個めから始まって、4個ずつ飛ばした要素に適用)
+              </dd>
+              <dt class="num"></dt>
+              <dd class="toc__unit numbaring__unit">
+                :nth-child(odd) or (2n+1) (前から奇数の要素に適用)
+              </dd>
+              <dt class="num"></dt>
+              <dd class="toc__unit numbaring__unit">
+                :nth-child(even) or (2n) (前から偶数の要素に適用)
+              </dd>
+              <dt class="num"></dt>
+              <dd class="toc__unit numbaring__unit">
+                :last-child (最後の要素だけ適用)
+              </dd>
+              <dt class="num"></dt>
+              <dd class="toc__unit numbaring__unit">
+                :nth-last-child (最後から2番めの要素にだけ適用)
+              </dd>
+              <dt class="num"></dt>
+              <dd class="toc__unit numbaring__unit">
+                :nth-of-type(n) (【CSS3】 n番目に現れる要素に適用)
+              </dd>
+              <dt class="num"></dt>
+              <dd class="toc__unit numbaring__unit">
+                :nth-last-of-type(n) (【CSS3】 後ろからn番目に現れる要素に適用)
+              </dd>
+              <dt class="num"></dt>
+              <dd class="toc__unit numbaring__unit">
+                :hover (マウスオーバー時に適用)
+              </dd>
+              <dt class="num"></dt>
+              <dd class="toc__unit numbaring__unit">
+                :active (要素がアクティブな時に適用)
+              </dd>
+              <dt class="num"></dt>
+              <dd class="toc__unit numbaring__unit">
+                :link (リンク先がある要素に適用)
+              </dd>
+              <dt class="num"></dt>
+              <dd class="toc__unit numbaring__unit">
+                :not (【CSS3】 該当しない場合に適用)
+              </dd>
+              <dt class="num"></dt>
+              <dd class="toc__unit numbaring__unit">
+                :cheked (【CSS3】 チェックされているユーザーインターフェース要素に適用　※ラジオボタンやチェックボックス等)
+              </dd>
+            </dl>
+            <!--<p class="toTop"><a href="#toc">目次へ戻る</a></p>-->
+          </div>
+        </div>
+      </section>
+      <!--***** / CSSセレクタ 種類リスト *****-->
+    </article>
+
+    <!--***** CSSセレクタ - セレクタ *****-->
+    <article class="container">
+      <section class="wrapper">
+        <div class="t origin">
+          <div class="col contents contents--full js__padding">
+
+            <div class="title">
+              <h4 id="No6" class="mTitle">【HTML/CSS】CSSセレクタのおさらい - セレクタ</h4>
+              <div class="sankaku"></div>
+            </div>
+
+            <!-- section -->
+            <div class="contSection mtL">
+              <h5 id="No6-1" class="mTitle--leftBorder">
+                * (ユニバーサルセレクタ)
+              </h5>
+
+              <p data-height="400" data-theme-id="dark" data-slug-hash="QOjYZq" data-default-tab="css,result" data-user="__sk__" data-embed-version="2" data-pen-title="Selector Exsample  (* - Universal selector)" class="codepen mtL">See the Pen <a href="https://codepen.io/__sk__/pen/QOjYZq/">Selector Exsample  (* - Universal selector)</a> by sksksk (<a href="https://codepen.io/__sk__">@__sk__</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+              <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+              <p class="desc">
+                <i class="fa fa-lightbulb-o" aria-hidden="true"></i>全てのセレクタに適応できます。ユニバーサルセレクタとも呼ばれます。
+                <br>「div *」とすると、divの子要素全てという指定になります。
+                <br>優先度が「!important」の次に高いので利用する時は注意しましょう。
+              </p>
+              <!-- <p class="toTop"><a href="#toc">目次へ戻る</a></p> -->
+            </div>
+
+            <!-- section -->
+            <div class="contSection">
+              <h5 id="No6-2" class="mTitle--leftBorder">
+                . (classセレクタ)
+              </h5>
+
+              <p data-height="500" data-theme-id="dark" data-slug-hash="YEyBaz" data-default-tab="css,result" data-user="__sk__" data-embed-version="2" data-pen-title="selector(class)" class="codepen">See the Pen <a href="https://codepen.io/__sk__/pen/YEyBaz/">selector(class)</a> by sksksk (<a href="https://codepen.io/__sk__">@__sk__</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+              <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+              <p class="desc">
+                <i class="fa fa-lightbulb-o" aria-hidden="true"></i>指定したクラス名だけにCSSが適応されます。
+                <br>「p.sample」とすると、クラス名「sample」が付いた<span class="markerPen">P要素のみ</span>に適応されます。
+                <br>もしP要素からa要素にHTML構造を変更すると適応されません。気をつけましょう。
+              </p>
+            	<!-- <p class="toTop"><a href="#toc">目次へ戻る</a></p> -->
+            </div>
+
+            <!-- section -->
+            <div class="contSection">
+              <h5 id="No6-3" class="mTitle--leftBorder">
+                # (idセレクタ)
+              </h5>
+
+              <p data-height="500" data-theme-id="dark" data-slug-hash="oojmRN" data-default-tab="css,result" data-user="__sk__" data-embed-version="2" data-pen-title="selector exsample(ID)" class="codepen">See the Pen <a href="https://codepen.io/__sk__/pen/oojmRN/">selector exsample(ID)</a> by sksksk (<a href="https://codepen.io/__sk__">@__sk__</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+              <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+
+              <p class="desc">
+                <i class="fa fa-lightbulb-o" aria-hidden="true"></i>使い方はclassと同じですが、使い回しはできません。
+                <br>CSS反映の優先度が高いのでclassと併用する時は注意しましょう。
+              </p>
+              <!-- <p class="toTop"><a href="#toc">目次へ戻る</a></p> -->
+            </div>
+
+            <div class="contSection">
+              <h5 id="No6-4" class="mTitle--leftBorder">
+                その他セレクタ指定方法
+              </h5>
+
+              <p data-height="500" data-theme-id="dark" data-slug-hash="wPgVKK" data-default-tab="html,result" data-user="__sk__" data-embed-version="2" data-pen-title="CSSセレクタ01" class="codepen">See the Pen <a href="https://codepen.io/__sk__/pen/wPgVKK/">CSSセレクタ01</a> by sksksk (<a href="https://codepen.io/__sk__">@__sk__</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+              <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+
+              <p class="desc">
+                <i class="fa fa-lightbulb-o" aria-hidden="true"></i>
+                <span class="fwb">Parent Child</span> （指定した親要素の子要素に適用する）
+                <br><span class="fwb">Parent &gt; Child</span> （指定した親要素の直下の子要素に適用する）
+                <br><span class="fwb">Element + Element</span> （隣接する要素に適用）
+                <br><span class="fwb">Element ~ Element</span> （【CSS3】後ろにある要素に適用）
+                <br>
+                <br>「Element + Element（隣接する要素に適用）」の1番最初のセレクタだけなぜCSSが適用されていないのか、
+                <br>厳密には隣接セレクタと言っても、「最初に指定した要素」 + 「その次に指定する要素」からCSSが適用対象となるからです。
+                <br>例えば「Aセレクタ + Bセレクタ」とした場合、Aセレクタの直後にあるBセレクタが対象になります。
+              </p>
+              <!-- <p class="toTop"><a href="#toc">目次へ戻る</a></p> -->
+            </div>
+          </div>
+        </div>
+      </section>
+    </article>
+    <!--***** / CSSセレクタ - セレクタ *****-->
+
+
+    <!--***** CSSセレクタ - 属性セレクタ *****-->
+    <article class="container">
+      <section class="wrapper">
+        <div class="t origin">
+          <div class="col contents contents--full js__padding">
+
+            <div class="title">
+              <h4 id="No7" class="mTitle">【HTML/CSS】CSSセレクタのおさらい - 属性セレクタ</h4>
+              <div class="sankaku"></div>
+            </div>
+
+            <!-- section -->
+            <div class="contSection mtL">
+
+              <p data-height="500" data-theme-id="dark" data-slug-hash="QOpWQw" data-default-tab="css,result" data-user="__sk__" data-embed-version="2" data-pen-title="属性セレクタ" class="codepen">See the Pen <a href="https://codepen.io/__sk__/pen/QOpWQw/">属性セレクタ</a> by sksksk (<a href="https://codepen.io/__sk__">@__sk__</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+              <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+
+              <p class="desc">
+                <i class="fa fa-lightbulb-o" aria-hidden="true"></i>
+                <span class="fwb">p[dog]</span> (特定の属性を持つ要素に適用)
+                <br><span class="fwb">p[dog="bow"]</span> (特定の属性値を持つ要素に適用)
+                <br><span class="fwb">p[dog^="bow"]</span> (CSS3 属性の値が指定した文字で始まる要素にだけ適用)
+                <br><span class="fwb">p[dog$="nyan"]</span> (CSS3 属性の値が指定した文字で終わる場合に適用)
+                <br><span class="fwb">p[dog*="bow"]</span> (CSS3 属性の値に指定した文字が含まれる場合に適用)
+              </p>
+              <!-- <p class="toTop"><a href="#toc">目次へ戻る</a></p> -->
+            </div>
+          </div>
+        </div>
+      </section>
+    </article>
+    <!--***** / CSSセレクタ - 属性セレクタ *****-->
+
+
+    <!--***** CSSセレクタ - 疑似要素 *****-->
+    <article class="container">
+      <section class="wrapper">
+        <div class="t origin">
+          <div class="col contents contents--full js__padding">
+
+            <div class="title">
+              <h4 id="No8" class="mTitle">【HTML/CSS】CSSセレクタのおさらい - 疑似要素</h4>
+              <div class="sankaku"></div>
+            </div>
+
+            <!-- section -->
+            <div class="contSection mtL">
+              <p data-height="500" data-theme-id="dark" data-slug-hash="yPMyaX" data-default-tab="html,result" data-user="__sk__" data-embed-version="2" data-pen-title="CSSセレクタ 疑似要素集" class="codepen">See the Pen <a href="https://codepen.io/__sk__/pen/yPMyaX/">CSSセレクタ 疑似要素集</a> by sksksk (<a href="https://codepen.io/__sk__">@__sk__</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+              <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+              <p class="desc">
+                <i class="fa fa-lightbulb-o" aria-hidden="true"></i>
+                <span class="fwb">:first-letter</span> (最初に現れる文字にだけ適用)
+                <br><span class="fwb">:first-line</span> (最初の行にだけ適用)
+                <br><span class="fwb">:first-child</span> (最初に現れる要素にだけ適用)
+                <br><span class="fwb">:nth-child</span> (前からn番目の要素にだけ適用)
+                <br><span class="fwb">:nth-child(n+3)</span> (前から3番目以降の要素に適用)
+                <br><span class="fwb">:nth-child(-n+3)</span> (前から3番目の要素だけに適用)
+                <br><span class="fwb">:nth-child(3n+1)</span> (前から1個目＆3個ずつ飛ばしの要素に適用)
+                <br><span class="fwb">:nth-child(odd) or (2n+1)</span> （前から1個目＆奇数の要素に適用）
+                <br><span class="fwb">:nth-child(even) or (2n)</span> （（前から1個目＆偶数の要素に適用））
+                <br><span class="fwb">:last-child</span> （最後の要素だけ適用）
+                <br><span class="fwb">:nth-last-child</span> （最後から数えて2つ飛ばしの要素に適用）
+                <br><span class="fwb">:nth-of-type(n)</span> （【CSS3】最後からn番目に現れる要素に適用）
+                <br><span class="fwb">:nth-last-of-type(n)</span> （【CSS3】最後からn番目に現れる要素に適用）
+                <br><span class="fwb">:hover</span> （マウスオーバー時に適用）
+                <br><span class="fwb">:acitve</span> （要素がアクティブな時に適用）
+                <br><span class="fwb">:not</span> （【CSS3】該当しない場合に適用）
+                <br><span class="fwb">:checked</span> （【CSS3】 チェックされている<small>※</small>ユーザーインターフェース要素に適用）
+                <br>
+                <br>※ユーザーインターフェース要素…&lt;input&gt;等
+              </p>
+              <!-- <p class="toTop"><a href="#toc">目次へ戻る</a></p> -->
+            </div>
+          </div>
+        </div>
+      </section>
+    </article>
+    <!--***** / CSSセレクタ - 疑似要素 *****-->
+
+
+		<!-- topへ戻る -->
+		<p id="page-top"><a href="#STUDY"><i class="far fa-lightbulb fa-4x"></i>PAGE TOP</a></p>
+
+
+    <footer class="t origin--footer">
+      <div class="container">
+        <small class="copyright">
+          Copylight(C)2017 HIROKEN.All rights reserved.<br/>【掲載記事・写真・イラストなどの無断複写・転載等を禁じます。】
+        </small>
+      </div>
+    </footer>
+	</div>
+  <!-- / .outer -->
+
+  <!-- Grab Google CDN's jQuery. fall back to local if necessary -->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script>window.jQuery || document.write("<script src='js/jquery-1.11.3.min.js'>\x3C/script>")</script>
+  <script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+  <!-- <script src="http://maps.google.com/maps/api/js?sensor=false"></script> -->
+  <script src="js/script.js"></script>
+	<script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+	<script type="text/javascript" src="js/jquery.sticky.js"></script>
+  <script type="text/javascript" src="js/jquery.dropdown.js"></script>
+</body>
+</html>
