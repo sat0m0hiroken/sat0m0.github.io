@@ -58,7 +58,7 @@ $(function() {
             if (showFlag == false) {
                 showFlag = true;
 								//正ならbottomから上へ200秒の速さで90pxまであげる
-                topBtn.stop().animate({'bottom' : '90px'}, 500);
+                topBtn.stop().animate({'bottom' : '70px'}, 500);
             }
         } else {
             if (showFlag) {
@@ -119,7 +119,6 @@ $(function() {
 // sp side nav
 $(function() {
   var $body = $('body');
-
   // ハンバーガーメニュークリック時にbodyにclassを付与
   $('.js__sideMenuBtn').on('click', function () {
     $body.toggleClass('side-open');
@@ -136,7 +135,7 @@ $(function() {
       $(this).addClass('active');
     }
     // メインコンテンツを覆うoverlayをクリックした時
-    $('.js__overlay').on('click', function () {
+    $('.js__overlay ,.sub li a').on('click', function () {
 			//閉じる時にside-menuのdisplayをnoneに変更
 			$('.side-menu,#sub').css('display','none');
       $body.removeClass('side-open');
@@ -178,20 +177,6 @@ $(window).on('load', function() {
     1500);
 });
 
-//スクロールするとナビゲーションが消える
-/*
-$(function() {
-	$(window).scroll(function () {
-		var top = $(this).scrollTop();
-		if(top > 100) {
-			$(".nav--sp").fadeOut('800');
-		}else{
-			$(".nav--sp").fadeIn('800');
-		}
-	});
-});
-*/
-
 // flow page
 $(function() {
   var $contBg = $('.bg--flowLine'),
@@ -231,6 +216,7 @@ $(".modh").hover(function(){
 	$('.menu').removeClass('.links');
 });
 
+
 //ドロップダウンメニュー
 if(!navigator.userAgent.match(/(iPhone|iPad|iPod|Android)/)){
 //スマホの場合無効になる処理
@@ -256,9 +242,41 @@ $(function() {
 	});
 }
 
-//ナビゲーション アイコン ホバー時動きを止める
-$('#links,.sub').hover(function(){
-	$('.fluffy').css("animation" , "none");
-},function(){
-	$('.fluffy').css("animation" , "fluffy1 3s ease infinite");
+/* contents メニュー表示/非表示 */
+var onoff = "off";
+var onimg = "img/test02.png";
+var offimg = "img/test01.png";
+
+$('.btn_menu').click(function() {
+   switch (onoff) {
+      case "off":
+        onoff = "on";
+					$('img[src="img/test02.png"]').attr('src','img/test01.png');
+				 	$(this).toggleClass('active');
+				 	$('#snav').toggleClass('open');
+				 	$('#snav').css('opacity','0.97');
+        break;
+      case "on":
+        onoff = "off";
+					$('img[src="img/test01.png"]').attr('src','img/test02.png');
+				 	$('#snav').removeClass('open');
+				 	$('#snav').css('opacity','0.97');
+				 	$('.btn_menu').removeClass('active');
+        break;
+   }
+});
+
+$('#wrap,.outer').click(function(){
+	$('img[src="img/test01.png"]').attr('src','img/test02.png');
+	$('#snav').removeClass('open');
+	$('#snav').css('opacity','0.97');
+	$('.btn_menu').removeClass('active');
+});
+
+
+/* 上から下に降ってくる*/
+$(function() {
+  $('.bright').animate({
+    'marginTop': '350px'
+  },1450);
 });

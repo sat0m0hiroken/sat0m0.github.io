@@ -348,6 +348,11 @@ contents
   padding: 0 10px;
 }
 
+@media only screen and (max-width: 768px) {
+  .container {
+    padding: 0;
+  }
+}
 /* contents width100%ver */
 div.contents.contents--full {
   box-sizing: border-box;
@@ -526,6 +531,75 @@ div.contents.contents--flow {
       border-bottom: 1px solid #ffea00;
     }
   }
+  /*   ボタンタグ設定   */
+  .sbutton button {
+    display: block;
+    background: none;
+    border: none;
+    padding: 0;
+    width: 42px;
+    color: #333;
+    letter-spacing: 0.1em;
+    cursor: pointer;
+    position: fixed;
+    top: -40rem;
+    right: 50px;
+    z-index: 1001;
+    text-align: center;
+    outline: none;
+  }
+  .sbutton button span.bar {
+    display: block;
+    height: 2px;
+    margin: 16.5rem 0;
+    transition: all 0.2s;
+    transform-origin: 0 0;
+  }
+
+  /*   豆電球   */
+  .bright img {
+    max-width: 150px;
+  }
+
+  .sbutton button .close {
+    letter-spacing: 0.08em;
+    display: none;
+  }
+  .sbutton button .menu {
+    display: block;
+  }
+  .sbutton button.active .bar1 {
+    background-image: url("../img/blight_on.png");
+  }
+  .sbutton button.active .menu {
+    display: none;
+  }
+  .sbutton button.active .close {
+    display: block;
+  }
+
+  /*  メニューアクティブ時  */
+  #snav {
+    margin-top: 50px;
+    width: 312px;
+    height: 100%;
+    transition: all 0.2s;
+    transform: translate(312px);
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    background-color: #FFF;
+  }
+
+  #navis {
+    display: none;
+  }
+
+  #snav.open {
+    transform: translate(0);
+  }
+
   #sub {
     display: none;
   }
@@ -550,6 +624,21 @@ div.contents.contents--flow {
   ul.sub li a:hover {
     padding-bottom: 2px;
     border-bottom: 2px solid #ffea00;
+  }
+
+  .global_nav {
+    padding: 100px 2.5px;
+  }
+  .global_nav li {
+    padding: 30px;
+    font-size: 14px;
+    text-align: center;
+  }
+  .global_nav li a {
+    padding: 5px;
+  }
+  .global_nav li a:hover {
+    border-bottom: 3px solid #ffea00;
   }
 
   .pc {
@@ -665,8 +754,9 @@ div.contents.contents--flow {
     cursor: pointer;
   }
 }
+/* 要素を消す */
 @media only screen and (max-width: 768px) {
-  #sub {
+  #sub, .sbutton {
     display: none;
   }
 }
@@ -676,7 +766,7 @@ div.contents.contents--flow {
   bottom: 222220px;
   right: 20px;
   font-size: 77%;
-  z-index: 3;
+  z-index: 1;
 }
 #page-top a {
   background: #ffea00;
@@ -1368,7 +1458,7 @@ frame
 CODE PAGE
 
 ************************************************/
-.page--code img {
+.page--code .outer img {
   max-height: 100%;
 }
 
@@ -1659,6 +1749,53 @@ PRODUCTION FLOW
   margin-bottom: 20px;
 }
 
+/* contents-step */
+.contents-cstep {
+  width: 943px;
+  margin: 0 auto;
+}
+
+.contents-rstep {
+  width: 290px;
+  position: relative;
+  z-index: 1;
+  top: -3rem;
+  right: -15rem;
+}
+
+.contents-lstep {
+  width: 290px;
+  position: relative;
+  z-index: 1;
+  top: -3rem;
+  left: -11rem;
+}
+
+@media only screen and (max-width: 768px) {
+  .contents-rstep {
+    width: auto;
+    position: relative;
+    z-index: 1;
+    top: 2rem;
+    right: 0rem;
+  }
+  .contents-rstep img {
+    max-height: none;
+    width: auto;
+  }
+
+  .contents-lstep {
+    width: auto;
+    position: relative;
+    z-index: 1;
+    top: 2rem;
+    left: 0rem;
+  }
+  .contents-lstep img {
+    max-height: none;
+    width: auto;
+  }
+}
 .flow__branch {
   transition: ease 1s;
   opacity: 0;

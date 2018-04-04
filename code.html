@@ -34,18 +34,18 @@
   </div>
 
   <!-- メニュー展開時のoverlay -->
-  <div class="overlay js__overlay"></div>
-  <header class="header">
-    <div class="nav">
-      <nav class="side-menu">
+	<div class="overlay js__overlay"></div>
+	<header class="header">
+		<div class="nav">
+			<nav class="side-menu">
 				<ul class="menu">
 					<li class="navi1"><a href="index.html">TOP</a></li>
-				  <li class="navi2"><a href="code.html">CODE</a></li>
-				  <li class="navi3"><a href="debug.html">DEBUG</a></li>
+					<li class="navi2"><a href="code.html">CODE</a></li>
+					<li class="navi3"><a href="debug.html">DEBUG</a></li>
 					<li class="navi5"><a href="flow.html">FLOW</a></li>
 					<li class="navi4"><a href="regulation.html">REGULATION</a></li>
-					<li><a href="seo.html">SEO</a></li>
-					<li class="navi5 modh links">
+					<li class="navi5"><a href="seo.html">SEO</a></li>
+					<li id="navis" class="navi6 modh links">
 						<a id="links" href="#"><i class="sad fluffy far fa-caret-square-down fa-2x"></i></a>
 						<ul id="sub" class="sub">
 							<li class="navi6"><a href="#No1">要素を上下・<br />左右・中央に寄せる</a></li>
@@ -55,9 +55,27 @@
 							<li class="navi10"><a href="#No5">CSSセレクタのおさらい</a></li>
 						</ul>
 					</li>
-    	  </ul>
-      </nav>
-    </div>
+			</ul>
+			</nav>
+		</div>
+
+		<div class="sbutton">
+			<button type="button" class="btn_menu">
+				<span class="bar bright bar1"><img src="img/test02.png" alt=""></span>
+				<span class="menu">MENU</span>
+				<span class="close">CLOSE</span>
+			</button>
+			<div id="snav" class="global_nav_wrapper">
+				<ul class="global_nav">
+					<li class="navi6"><a href="#No1">要素を上下・左右・中央に寄せる</a></li>
+					<li class="navi7"><a href="#No2">HTML5でレイアウトコーディング</a></li>
+					<li class="navi8"><a href="#No3">CSSで作るタイトルデザイン</a></li>
+					<li class="navi9"><a href="#No4">使いやすそうなtable</a></li>
+					<li class="navi10"><a href="#No5">CSSセレクタのおさらい</a></li>
+				</ul>
+			</div>
+		</div>
+
   </header>
 
   <div class="outer">

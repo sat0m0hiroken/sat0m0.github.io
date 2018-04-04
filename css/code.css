@@ -990,7 +990,7 @@ TITLE DEMO
 .ttl11--4::after {
   top: 0;
   right: 0;
-  z-index: 2;
+  z-index: 1;
   border-width: 25px 20px;
   border-style: solid;
   border-color: transparent;
